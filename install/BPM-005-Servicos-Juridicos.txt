@@ -1,0 +1,36 @@
+---------- Manual para instalaÃ§Ã£o do processo Jurídico ----------------
+
+1. Importar formulário BPM-000.1-Categoria
+
+2. Criar view V_BPM000_JUR_CATEGORIA com base na tabela ML do formulário acima
+
+3. Criar Papeis:
+		Código						Descrição
+		JURI_grupo_1 				Grupo 1 do Jurídico
+		JURI_grupo_2 				Grupo 2 do Jurídico
+		JURI_grupo_3 				Grupo 3 do Jurídico
+		JURI_grupo_4 				Grupo 4 do Jurídico
+		JURI_grupo_5 				Grupo 5 do Jurídico
+		JURI_grupo_6 				Grupo 6 do Jurídico
+		JURI_grupo_7 				Grupo 7 do Jurídico
+		JURI_grupo_8 				Grupo 8 do Jurídico
+		JURI_grupo_9 				Grupo 9 do Jurídico
+		JURI_grupo_10 				Grupo 10 do Jurídico
+		JURI_grupo_11 				Grupo 11 do Jurídico
+		JURI_grupo_12 				Grupo 12 do Jurídico	
+		JURI_grupo_13 				Grupo 13 do Jurídico
+		JURI_grupo_14 				Grupo 14 do Jurídico
+		JURI_grupo_15 				Grupo 15 do Jurídico
+		JURI_grupo_16 				Grupo 16 do Jurídico
+		JURI_grupo_17 				Grupo 17 do Jurídico
+		JURI_grupo_18 				Grupo 18 do Jurídico
+		JURI_grupo_19 				Grupo 19 do Jurídico
+		JURI_grupo_20 				Grupo 20 do Jurídico
+		JURI_grupo_21 				Grupo 21 do Jurídico
+		JURI_grupo_22 				Grupo 22 do Jurídico
+
+
+4. Importar formulário BPM-000.2-Assunto
+
+5. Criar view V_BPM000_JUR_ASSUNTO com base na tabela ML do formulário acima
+
