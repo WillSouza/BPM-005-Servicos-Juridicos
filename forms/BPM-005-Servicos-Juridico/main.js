@@ -503,7 +503,10 @@ function setSelectedZoomItem(selectedItem) {
         }
 
         $("#assunto").val('');
+
+      
         reloadZoomFilterValues('assunto', 'categoria,' +categoria );
+        //console.log("--- categoria : "+ categoria[0]);
     }
 
     if(selectedItem.inputName == "assunto"){

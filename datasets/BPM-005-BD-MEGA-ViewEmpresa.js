@@ -5,17 +5,18 @@ function createDataset(fields, constraints, sortFields) {
     
     //var myQuery = findConstraint('SQL', constraints);
     
-	var categoria = findConstraint("categoria",constraints,"");
-    var assunto = findConstraint("assunto",constraints,"");
+    var empresa = findConstraint("ORG_ST_NOME",constraints,"");
     //var papel = "qualidade"; 
-    log.info("**** Contraint SQL ASSUNTO : "+assunto);
+    log.info("**** Contraint SQL : "+empresa);
     
-    var myQuery = "SELECT * FROM V_BPM000_JUR_ASSUNTO v WHERE ativo = 'on' AND  " +
-    		"  version = (SELECT MAX(version) FROM V_BPM000_JUR_ASSUNTO z WHERE  z.DOcumentId = v.DOCUMENTID)  AND categoria LIKE '%"+categoria+"%' AND assunto LIKE '%"+  assunto +"%' ORDER BY TO_NUMBER(sequencia) ASC ";
-
+    var myQuery = "select ORG_IN_CODIGO "+
+    				",ORG_ST_FANTASIA "+
+    				",ORG_ST_NOME "+ 
+    				"from appsez.glo_vw_organizacao  WHERE ORG_ST_NOME LIKE '%"+ empresa  +"%' AND ROWNUM <= 100";
+    
     log.info("##### My Query: "+myQuery);
 
-    var dataSource = "/jdbc/FluigDS";
+    var dataSource = "/jdbc/MegaDS";
     var ic = new javax.naming.InitialContext();
     var ds = ic.lookup(dataSource);
     var created = false;

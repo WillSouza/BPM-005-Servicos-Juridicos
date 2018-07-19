@@ -9,8 +9,8 @@ function createDataset(fields, constraints, sortFields) {
     //var papel = "qualidade"; 
     log.info("**** Contraint SQL : "+categoria);
     
-    var myQuery = "SELECT * FROM V_BPM000_JUR_CATEGORIA v WHERE ativo = 'on' AND sequencia IS NOT NULL AND " +
-    		"  version = (SELECT MAX(version) FROM V_BPM000_JUR_CATEGORIA z WHERE  z.DOcumentId = v.DOCUMENTID)  AND categoria LIKE '%"+categoria+"%' ORDER BY TO_NUMBER(sequencia) ASC ";
+    var myQuery = "SELECT * FROM V_BPM005_JUR_CATEGORIA v WHERE ativo = 'on' AND sequencia IS NOT NULL AND " +
+    		"  version = (SELECT MAX(version) FROM V_BPM005_JUR_CATEGORIA z WHERE  z.DOcumentId = v.DOCUMENTID)  AND categoria LIKE '%"+categoria+"%' ORDER BY TO_NUMBER(sequencia) ASC ";
 
     log.info("##### My Query: "+myQuery);
 
