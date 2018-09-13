@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>volume</string>
+   <array class="java.lang.String" length="1">
+    <void index="0">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>mecanismoGrupo</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo inicializador do BPM-002</string>
+      </void>
+      <void property="groupId">
+       <string>bpm-002 piloto</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>DATE - ASSISTÊNCIA TÉCNICA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.DATE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>DEMP - DESEMPENHO DOS EMPREENDIMENTOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.DEMP</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>DORH - DESENVOLVIMENTO ORGANIZACIONAL</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.DORH</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>DPAC - PERSONALIZAÇÃO E ATENDIMENTO AO CLIENTE</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.DPAC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>DPRO - DESENVOLVIMENTO DE PRODUTO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.DPRO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>RCRE - RECUPERAÇÃO DE CRÉDITO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.RCRE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>RECE - RECEBÍVEIS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.RECE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>REPA - REPASSE</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.REPA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>RINV - RELAÇÕES COM INVESTIDORES</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.RINV</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>PRCO - PROJETOS CORPORATIVOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.PRCO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total a pasta Documentos e Formulários</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Documentos e Fomulários-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de leitura para a pasta Fluig Forms</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Fluig Forms-R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>GATC - ATENDIMENTO AO CORRETOR</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.GATC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>VCRE - ANÁLISE DE CRÉDITO - VENDAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.VCRE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>VFIN - FINANCEIRO - VENDAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.VFIN</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>VJUR - JURÍDICO - VENDAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.VJUR</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>DIRE - DIRETORIA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.DIRE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>VMKT - GESTÃO DE INFORMAÇÕES E MARKETING - VENDAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.VMKT</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>VEND - VENDAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.VEND</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group EZTEC Obra</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_eztec-obra</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group EZTEC Obra</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_eztec-obra</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Tec Vendas</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_tec-vendas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Tec Vendas</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_tec-vendas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Contrato de fornecedores</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-004-contrato_fornecedores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Administrador BPM-005</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-Adm</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 1 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_1</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 2 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_2</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 5 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_5</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 6 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_6</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 7 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_7</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 10 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_10</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 12 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_12</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 13 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_13</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 14 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_14</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 15 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_15</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 18 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_18</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 20 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_20</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 21 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_21</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 22 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_22</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total na pasta Documentos / Juridico</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Juridico-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo Global com permissão de leitura</string>
+      </void>
+      <void property="groupId">
+       <string>GG.R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Eztec</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_eztec</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Eztec</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_eztec</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Administradores EZConnect</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_administradores-connect</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Administradores EZConnect</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_administradores-connect</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>TERR - PROSPECÇÃO DE TERRENOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.TERR</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>OBRA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.OBRA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Marketing</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_Marketing</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Marketing</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_Marketing</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total na pasta Contrato de Clientes</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Contratos de Clientes-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de leitura na pasta Documentos Financeiros de Parceiros</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Documento Financeiro de Parceiro-R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de leitura na pasta Contratos de Clientes</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Contratos de Clientes-R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso de Marketing para alterar o Layout do Fluig</string>
+      </void>
+      <void property="groupId">
+       <string>Acesso Marketng</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>GDEM - GESTÃO DE EMPREENDIMENTOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.GDEM</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-004-juridico</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 8 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_8</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 3 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_3</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 4 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_4</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 9 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_9</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 11 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_11</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 16 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_16</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group TI</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_TI</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group DORH</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_DORH</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group DORH</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_DORH</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group TI</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_TI</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total a pasta Gestão Técnica de Terrenos</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Gestão Técnica de Terrenos-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso de parceiros a pasta parceiros</string>
+      </void>
+      <void property="groupId">
+       <string>Acesso Parceiros</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso dos funcionários na Intranet</string>
+      </void>
+      <void property="groupId">
+       <string>Acesso Funcionários</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total na pasta Documentos Financeiros de Paceiros</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Documento Financeiro de Parceiro-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Jurídico global</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-Juridico</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total na pasta Desempenho de Edificações</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Desempenho de Edificações-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo Global com permissão total na pasta Cadastros Basicos</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Cadastros Basicos.RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo Global com permissão de leitura na pasta Cadastros Basicos</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Cadastros Basicos.R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>PROJ - PROJETOS EXECUTIVOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.PROJ</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>SEDE - SEDE ADMINISTRATIVA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.SEDE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>ENGE - COORDENAÇÃO DE OBRAS E GESTÃO TÉCNICA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.ENGE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>SEGU - SEGURANÇA DO TRABALHO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.SEGU</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>SUPR - SUPRIMENTOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.SUPR</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>TESO - TESOURARIA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.TESO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>TI - TECNOLOGIA DA INFORMAÇÃO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.TI</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group EZTEC Escritório</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_eztec-escriorio</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group EZTEC Escritório</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_eztec-escriorio</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de leitura para a pasta Gestão Técnica de Terrenos</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Gestão Técnica de Terrenos-R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de leitura na pasta Contratos vs Empreendimentos</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Contratos vs Empreendimentos-R</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acessos dos Freelancers no Fluig-ECM</string>
+      </void>
+      <void property="groupId">
+       <string>Acesso Freelancer</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso dos administradores do RH no Fluig/Ezconnect</string>
+      </void>
+      <void property="groupId">
+       <string>Acesso RH</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Administrador BPM-002</string>
+      </void>
+      <void property="groupId">
+       <string>Adm.BPM-002</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 17 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_17</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo 19 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_19</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Grupo de Qualidade</string>
+      </void>
+      <void property="groupId">
+       <string>PROC.QUAL.GESTÃO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>CTBD - CONTABILIDADE E FISCAL</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.CTBD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>CTCL - CONTRATOS DE CLIENTES</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.CTCL</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>CTFO - CONTRATOS DE FORNECEDORES</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.CTFO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>CTRL - CONTROLADORIA E PLANEJAMENTO FINANCEIRO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.CTRL</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>ESTA - ESTATUTÁRIO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.ESTA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>GETT - GESTÃO TÉCNICA DE TERRENOS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.GETT</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>INTE - ARQUITETURA DE INTERIORES</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.INTE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>JURI - JURÍDICO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.JURI</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>LICE- LICENCIAMENTO</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.LICE</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>MKTG - MARKETING</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.MKTG</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>OPES - OPERAÇÕES ESTRUTURADAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.OPES</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>ORCA - ORÇAMENTO DE OBRAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.ORCA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>PLAN - PLANEJAMENTO E CONTROLE</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.PLAN</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>PRES - PRESIDÊNCIA</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.PRES</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>QUAL - QUALIDADE</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.QUAL</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>SAC - SERVIÇO DE ATENDIMENTO AO CLIENTE</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.SAC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Qualidade</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_Qualidade</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Qualidade</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_Qualidade</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Moderator group Gestores</string>
+      </void>
+      <void property="groupId">
+       <string>MODERATOR_Gestores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Member group Gestores</string>
+      </void>
+      <void property="groupId">
+       <string>MEMBER_Gestores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>VADM - ADMINISTRAÇÃO - VENDAS</string>
+      </void>
+      <void property="groupId">
+       <string>DEP.VADM</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Permissão de acesso total na pasta Contratos vs Empreendimentos</string>
+      </void>
+      <void property="groupId">
+       <string>GG.Documentos.Contratos vs Empreendimentos-RWD</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Acesso ao widget Lista Mestra</string>
+      </void>
+      <void property="groupId">
+       <string>Widget.ListaMestra</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>expediente</string>
+   <array class="java.lang.String" length="2">
+    <void index="0">
+     <string>Default</string>
+    </void>
+    <void index="1">
+     <string>EZTEC - Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>processosServidor</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Elaboração de documentos</string>
+      </void>
+      <void property="processId">
+       <string>BPM-002</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Serviço jurídico</string>
+      </void>
+      <void property="processId">
+       <string>BPM-005</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Elaboração de contratos de fornecedores</string>
+      </void>
+      <void property="processId">
+       <string>BPM-004</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Listar Tarefas</string>
+      </void>
+      <void property="processId">
+       <string>FLUIGADHOC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Canal EZConnect</string>
+      </void>
+      <void property="processId">
+       <string>BPM-001</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>mecanismo</string>
+   <array class="[Ljava.lang.Object;" length="9">
+    <void index="0">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Associação</string>
+      </void>
+      <void index="1">
+       <string>Associado</string>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Campo de Formulário</string>
+      </void>
+      <void index="1">
+       <string>Campo Formulário</string>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Executor de Atividade</string>
+      </void>
+      <void index="1">
+       <string>Executor Atividade</string>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupo</string>
+      </void>
+      <void index="1">
+       <string>Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupos do Colaborador</string>
+      </void>
+      <void index="1">
+       <string>Grupos Colaborador</string>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Papel</string>
+      </void>
+      <void index="1">
+       <string>Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Grupo</string>
+      </void>
+      <void index="1">
+       <string>Pool Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Papel</string>
+      </void>
+      <void index="1">
+       <string>Pool Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="8">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Usuário</string>
+      </void>
+      <void index="1">
+       <string>Usuário</string>
+      </void>
+     </array>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 286354</string>
+   <array class="java.lang.String" length="40">
+    <void index="0">
+     <string>anotJuridico</string>
+    </void>
+    <void index="1">
+     <string>assunto</string>
+    </void>
+    <void index="2">
+     <string>assunto3</string>
+    </void>
+    <void index="3">
+     <string>categoria</string>
+    </void>
+    <void index="4">
+     <string>categoria2</string>
+    </void>
+    <void index="5">
+     <string>codGrupo</string>
+    </void>
+    <void index="6">
+     <string>dataSolic</string>
+    </void>
+    <void index="7">
+     <string>descSolic</string>
+    </void>
+    <void index="8">
+     <string>empresa</string>
+    </void>
+    <void index="9">
+     <string>empresa2</string>
+    </void>
+    <void index="10">
+     <string>horaAtual</string>
+    </void>
+    <void index="11">
+     <string>ident</string>
+    </void>
+    <void index="12">
+     <string>indextab</string>
+    </void>
+    <void index="13">
+     <string>justificaPrazo</string>
+    </void>
+    <void index="14">
+     <string>necAjuste</string>
+    </void>
+    <void index="15">
+     <string>necAjusteValid</string>
+    </void>
+    <void index="16">
+     <string>outraCategoria</string>
+    </void>
+    <void index="17">
+     <string>outraEmpresa</string>
+    </void>
+    <void index="18">
+     <string>outraParte</string>
+    </void>
+    <void index="19">
+     <string>outroAssunto</string>
+    </void>
+    <void index="20">
+     <string>prazoDeterminado</string>
+    </void>
+    <void index="21">
+     <string>prazoFluig</string>
+    </void>
+    <void index="22">
+     <string>prazoRevisao</string>
+    </void>
+    <void index="23">
+     <string>prioridade</string>
+    </void>
+    <void index="24">
+     <string>prioridade2</string>
+    </void>
+    <void index="25">
+     <string>rdMotivoPrazo</string>
+    </void>
+    <void index="26">
+     <string>rdMotivoPrazoValid</string>
+    </void>
+    <void index="27">
+     <string>rdNecAjuste</string>
+    </void>
+    <void index="28">
+     <string>rdSolicOriginal</string>
+    </void>
+    <void index="29">
+     <string>rdTipoPrazo</string>
+    </void>
+    <void index="30">
+     <string>saldoHoras</string>
+    </void>
+    <void index="31">
+     <string>solicOriginalValid</string>
+    </void>
+    <void index="32">
+     <string>solicitante</string>
+    </void>
+    <void index="33">
+     <string>tab_autor</string>
+    </void>
+    <void index="34">
+     <string>tab_data</string>
+    </void>
+    <void index="35">
+     <string>tab_obs</string>
+    </void>
+    <void index="36">
+     <string>tipoPrazoValid</string>
+    </void>
+    <void index="37">
+     <string>userAtivo</string>
+    </void>
+    <void index="38">
+     <string>userAtivoExecTarefa</string>
+    </void>
+    <void index="39">
+     <string>userOutro</string>
+    </void>
+   </array>
+  </void>
+ </object>
+</java>

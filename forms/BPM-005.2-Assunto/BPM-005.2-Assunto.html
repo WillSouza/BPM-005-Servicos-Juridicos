@@ -1,0 +1,290 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet"  href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
+<script type="text/javascript"  src="/portal/resources/js/jquery/jquery.js"></script>
+<script type="text/javascript"  src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript"  src="/portal/resources/js/mustache/mustache-min.js"></script>
+<script type="text/javascript"  src="/portal/resources/style-guide/js/fluig-style-guide.min.js"  charset="utf-8"></script>
+
+<script type="text/javascript" src="../vcXMLRPC.js"></script>
+<script type="text/javascript" src="main.js" charset="utf-8"></script>
+
+<style>
+	  /* fieldset*/
+		.bs-box {
+			border-color: #e5e5e5 #eee #eee;
+			border-style: solid;
+			border-width: 1px 0;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+			margin: 0 -15px 15px;
+			padding: 45px 15px 15px;
+			position: relative;
+		}
+		.bs-box:after {
+			color: #959595;
+			content: "";
+			font-size: 12px;
+			font-weight: 700;
+			left: 15px;
+			letter-spacing: 1px;
+			position: absolute;
+			text-transform: uppercase;
+			top: 15px;
+		}
+		.bs-box + .highlight {
+			border-radius: 0;
+			border-width: 0 0 1px;
+			margin: -15px -15px 15px;
+		}
+		@media (min-width: 768px) {
+			.bs-box {
+				background-color: #fff;
+				border-color: #ddd;
+				border-radius: 4px 4px 0 0;
+				border-width: 1px;
+				box-shadow: none;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.bs-box + .highlight {
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				border-width: 1px;
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: -16px;
+			}
+		}
+		.bs-box .container {
+			width: auto;
+		}
+		/* box tabs*/
+		.bs-box-tabs {
+			border-color: #e5e5e5 #eee #eee;
+			border-style: solid;
+			border-width: 1px 0;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+			margin: 0 -15px 15px;
+			padding: 45px 15px 15px;
+			position: relative;
+		}
+		.bs-box-tabs:after {
+			color: #959595;
+			content: "";
+			font-size: 12px;
+			font-weight: 700;
+			left: 15px;
+			letter-spacing: 1px;
+			position: absolute;
+			text-transform: uppercase;
+			top: 15px;
+		}
+		.bs-box-tabs + .highlight {
+			border-radius: 0;
+			border-width: 0 0 1px;
+			margin: -15px -15px 15px;
+		}
+		@media (min-width: 768px) {
+			.bs-box-tabs {
+				background-color: #fff;
+				border-color: #ddd;
+				border-radius: 4px 4px 0 0;
+				border-width: 1px;
+				box-shadow: none;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.bs-box-tabs + .highlight {
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				border-width: 1px;
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: -16px;
+			}
+		}
+		.bs-box-tabs .container {
+			width: auto;
+		}
+		
+		fieldset {
+			margin-top: 20px;
+		}
+		.title {
+			margin-bottom: 15px;
+		}
+		#logo {
+			width: auto;
+		}
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #FF9900;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 20px;
+			padding: 0;
+			width: 100%;
+			text-transform: uppercase;
+		}
+		span.help-block:empty{
+		display: none; 
+		}
+		.box {
+		 width: 50%;
+		 float: left;
+		 height: 130px;/*Altura da linha*/
+        -webkit-transform:rotate(340deg); //tente 90 no lugar de 270
+	    -moz-transform:rotate(10deg);
+	    -o-transform: rotate(10deg);
+		}
+		  span.help-block:empty{
+		  display: none; 
+		  }
+		  
+		  .input-group-addon {
+			 padding: 6px 3px;
+			}
+			.glyphicon {
+			 font-size: 10px;
+		  }
+		  .radio-inline span.help-block{
+			   display: none; 
+			 }
+		textarea {
+ 			 resize: none;
+		  }	 
+
+
+</style>
+
+</head>
+<body >
+  <div class="fluig-style-guide">
+
+
+	<div class="container">
+    	<div class="row title" align="center">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="logo.jpg" style="width: 200px" class="img-responsive" id="logo"/>
+				</div>
+				<div class="col-md-5">
+					<h2>Assunto</h2>
+				</div>
+				<div class="col-md-3">
+					
+				</div>
+			</div>
+			<br/><br/>
+		</div> <!-- Fim da div row title -->
+
+	<form class="form-horizontal" name="form" id="form" role="form" novalidate="novalidate">
+		
+		<input type="text" class="hide" name="codGrupo" id="codGrupo">
+
+		<div class="tab-content">
+			
+			<div class="form-group">
+				<div class="label-field">
+					<div class="col-md-1 col-lg-1"></div>
+				</div>
+
+				<div class="label-field">
+					<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+						<label for="categoria" class="control-label">Categoria<span class="required text-danger"><strong>*</strong></span></label>
+						<input type="zoom" class="form-control" name="categoria" id="categoria"
+							data-zoom="{
+								'displaykey': 'categoria',
+								'datasetId': 'BPM-005-Categoria',
+								'fields': [
+									{
+										'field': 'categoria',
+										'label': 'Categoria',
+										'filterValues': 'categoria',
+										'standard': 'true'
+									}	
+								]	
+							}"
+						/>
+					</div>
+				</div>	
+
+				<div class="label-field">
+					<div class="col-md-1 col-lg-1"></div>
+				</div>
+
+				<div class="label-field">
+					<div class="col-xs-11 col-sm-11 col-md-3 col-lg-3" style="margin-top: 30px;">
+						
+						<input type="checkbox" checked name="ativo" id="ativo" /><label for="ativo" class="control-label">  Ativo?</label>
+					</div>	
+				</div>	
+			</div>	
+
+			<br/>
+
+			<div class="form-group">
+				<div class="label-field">
+					<div class="col-md-1 col-lg-1"></div>
+				</div>
+
+				<div class="label-field">
+					<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+						<label for="assunto" class="control-label">Cadastro de Assunto<span class="required text-danger"><strong>*</strong></span></label>
+						<input type="text" name="assunto" id="assunto" class="form-control">
+					</div>
+				</div>
+
+				<div class="label-field">
+					<div class="col-md-1 col-lg-1"></div>
+				</div>
+				<div class="label-field">
+					<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+						<label for="sequencia" class="control-label">Sequ&ecirc;ncia</label>
+						<input type="number" name="sequencia" id="sequencia" class="form-control">
+					</div>
+				</div>
+			</div>	
+
+			<div class="form-group">
+				<div class="label-field">
+					<div class="col-md-1 col-lg-1"></div>
+				</div>
+
+				<div class="label-field">
+					<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+						<label for="papel" class="control-label">Grupo<span class="required text-danger"><strong>*</strong></span></label>
+						<input type="zoom" name="papel" id="papel" class="form-control"
+							data-zoom="{
+								'displayKey': 'DESCRIPTION',
+			                    'datasetId':'BPM-005-Papeis',
+			                    'fields':[
+			                    {
+			                      'field':'DESCRIPTION',
+			                      'label':'Papel',          
+			                      'filterValues': 'DESCRIPTION',                                               
+			                      'standard':'true'
+			                    }
+			                  ]
+							}"
+						/>
+					</div>
+				</div>
+
+
+			</div>	
+
+		</div>	<!-- Fim da aba tab-content -->
+    </form>
+  </div>
+</body>
+</html>
+
