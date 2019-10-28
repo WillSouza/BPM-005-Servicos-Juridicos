@@ -1,0 +1,84 @@
+fieldset {
+	margin-top: 20px;
+}
+.title {
+	margin-bottom: 15px;
+}
+#logo {
+	width: auto;
+}
+legend {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+	border-image: none;
+	border-style: none none solid;
+	border-width: 0 0 1px;
+	/* color: #FF9900; */
+	display: block;
+	font-size: 10px;
+	line-height: inherit;
+	margin-bottom: 20px;
+	padding: 0;
+	width: 100%;
+	text-transform: uppercase;
+}
+span.help-block:empty{
+	display: none; 
+}
+.box {
+	width: 50%;
+	float: left;
+	height: 130px;/*Altura da linha*/
+	-webkit-transform:rotate(340deg); /*tente 90 no lugar de 270*/
+	-moz-transform:rotate(10deg);
+	-o-transform: rotate(10deg);
+}
+span.help-block:empty{
+	display: none; 
+}
+  
+.input-group-addon {
+ padding: 6px 3px;
+}
+.glyphicon {
+ font-size: 10px;
+}
+.radio-inline span.help-block{
+   display: none; 
+ }
+/* textarea {
+	 resize: none;
+}	  */ 
+.form-group {
+	width: 99%;
+	padding-left: 10px;
+}
+
+.labelValidate{
+	color: rgb(255, 80, 80);
+}
+
+.fieldValidate{
+	border-color: rgb(255, 80, 80); 
+}
+
+.row{
+	margin-bottom: 1%;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.tipoPrazoMargin{
+    margin-top: 2%;
+}

@@ -9,7 +9,7 @@ function createDataset(fields, constraints, sortFields) {
     //var papel = "qualidade"; 
     log.info("**** Contraint SQL : "+grupo);
     
-    var myQuery = "SELECT * FROM FDN_GROUP WHERE GROUP_CODE LIKE 'BPM-005-JURI_grupo_%' AND description LIKE '%"+grupo +"%' ORDER BY description ASC";
+    var myQuery = "SELECT * FROM FDN_GROUP WHERE GROUP_CODE LIKE 'BPM-005-_%' AND description LIKE '%"+grupo +"%' ORDER BY description ASC";
     
     log.info("##### My Query: "+myQuery);
 

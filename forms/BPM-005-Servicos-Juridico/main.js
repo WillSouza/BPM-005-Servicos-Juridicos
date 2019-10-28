@@ -1,500 +1,683 @@
-var myLoading2  = FLUIGC.loading(window);
+var myLoading2 = FLUIGC.loading(window);
 var carregaProg = FLUIGC.loading("#home");
 var carregaConf = FLUIGC.loading("#menu1");
 
 var controle = [];
 var eztecForms = {
-        params: {},
-        initForm: function(params) {    
-            this.params = params;
-            var $this = this;   
-            $(function () {
-                if (params.formMode == "ADD" || params.formMode == "MOD") { 
-                    $this.onEdit(params);
-                } else {
-                    $this.onView(params);
-                }
-            });
-        },
-        onView: function(params) { //Visualização do formulário sem a possibilidade de edição (consulta)
-
-        },
-        onEdit: function(params) {  //Edição do formulário
-           
-           var WKNumState = params.WKNumState;
-           var WKNumProces = params.WKNumProces;
-           
-           //alert("teste");
-           console.log("### Tarefa : "+WKNumState);
-              	
-           var now = new Date();
-            var dateTime =  FLUIGC.calendar('#prazoRevisao', {
-                pickDate: true,
-                pickTime: true,
-                sideBySide: true,
-                daysOfWeekDisabled: [0,6],
-                minDate: now
-            
-            });
-
-            
-
-           // Validação de campos Obrigatórios
-
-
-            $("input[name='rdSolicOriginal']").change(function(e){
-
-                if($(this).val() === 'userSolic'){
-
-                    $("#solicOriginalValid").val('1');
-                    $("#userOutro").addClass("hide");
-                    $("#userOutro").val("");
-
-                    $(".solicOriginal").removeClass('has-error');
-
-
-                } else if($(this).val() === 'outro'){
-
-                    $("#solicOriginalValid").val('0');
-                    $("#userOutro").removeClass("hide");
-                    $(".solicOriginal").removeClass('has-error');
-                }
-            });
-
-            $("#prioridade").change(function(e){
-
-                console.log("--- Change ---");
-
-                if($(this).val() === '1'){
-
-                    $("#prioridade2").val("Importante e urgente");
-                
-                }else if($(this).val() == '2'){
-
-                    $("#prioridade2").val("Importante");    
-                
-                }else if($(this).val() == '3'){
-
-                    $("#prioridade2").val("Urgente");    
-                
-                }else if($(this).val() == '4'){
-
-                    $("#prioridade2").val("Normal");    
-                
-                }else if($(this).val() == '0'){
-
-                    $("#prioridade2").val("");    
-                }
-
-            });
-
-            $("input[name='rdTipoPrazo']").change(function(e){
-
-                console.log("___ prazo: "+$(this).val());
-                if($(this).val() === 'prazoPadrao'){
-
-                    $("#tipoPrazoValid").val('1');
-                    $("#prazoDeterminado").addClass("hide");
-                    $("#prazoDeterminado").val("");
-                    $(".tipoPrazo").removeClass('has-error');
-                    $(".motivoPrazoDet").addClass("hide");
-
-                } else if($(this).val() === 'determinado'){
-
-                    $("#tipoPrazoValid").val('0');
-                    $("#prazoDeterminado").removeClass("hide");
-                    $(".tipoPrazo").removeClass('has-error');
-                    $(".motivoPrazoDet").removeClass("hide");
-
-                }
-            });
-
-
-            $("input[name='rdMotivoPrazo']").change(function(e){
-
-
-                if($(this).val() === 'outro'){
-
-                    $("#rdMotivoPrazoValid").val('1');
-                    $("#justificaPrazo").removeClass("hide");
-
-                } else {
-
-                    $("#rdMotivoPrazoValid").val('0');
-                    $("#justificaPrazo").addClass("hide");
-                    $("#justificaPrazo").val("");
-                }
-
-                 console.log("___ motivo: "+$(this).val());
-                console.log("___ index:"+ $("#rdMotivoPrazoValid").val());
-                
-            });
-
-
-
-            // Tarefa Inicial
-            if(WKNumState == "4" || WKNumState == "0" ){
-
-                console.log("ENTROU NO IF Tarefa Inicial");
-
-                $("#userOutro").addClass('hide');
-                
-            
+    params: {},
+    initForm: function (params) {
+        this.params = params;
+        var $this = this;
+        $(function () {
+            if (params.formMode == "ADD" || params.formMode == "MOD") {
+                $this.onEdit(params);
+            } else {
+                $this.onView(params);
             }
+        });
+    },
+    onView: function (params) { //Visualização do formulário sem a possibilidade de edição (consulta)
+
+    },
+    onEdit: function (params) {  //Edição do formulário
+
+        var WKNumState = params.WKNumState;
+        var WKNumProces = params.WKNumProces;
+        var prazoPadrao = 10;
+
+        //alert("teste");
+        console.log("### Tarefa : " + WKNumState);
+
+        var now = new Date();
+        var dateTime = FLUIGC.calendar('#prazoRevisao', {
+            pickDate: true,
+            pickTime: true,
+            sideBySide: true,
+            daysOfWeekDisabled: [0, 6],
+            minDate: now
+
+        });
+
+
+
+        // Validação de campos Obrigatórios
+
+
+        $("input[name='rdSolicOriginal']").change(function (e) {
+
+            if ($(this).val() === 'userSolic') {
+
+                $("#solicOriginalValid").val('1');
+                $("#userOutro").addClass("hide");
+                $("#userOutro").val("");
+
+                $(".solicOriginal").removeClass('has-error');
+
+
+            } else if ($(this).val() === 'outro') {
+
+                $("#solicOriginalValid").val('0');
+                $("#userOutro").removeClass("hide");
+                $(".solicOriginal").removeClass('has-error');
+            }
+        });
+
+        $("#prioridade").change(function (e) {
+
+            console.log("--- Change ---");
+
+            if ($(this).val() === '1') {
+
+                $("#prioridade2").val("Importante e urgente");
+
+            } else if ($(this).val() == '2') {
+
+                $("#prioridade2").val("Importante");
+
+            } else if ($(this).val() == '3') {
+
+                $("#prioridade2").val("Urgente");
+
+            } else if ($(this).val() == '4') {
+
+                $("#prioridade2").val("Normal");
+
+            } else if ($(this).val() == '0') {
+
+                $("#prioridade2").val("");
+            }
+
+        });
+
+        $("input[name='rdTipoPrazo']").change(function (e) {
+
+            console.log("___ prazo: " + $(this).val());
+            if ($(this).val() != 'Determinado') {
+
+                $("#tipoPrazoValid").val('1');
+                $("#prazoDeterminado").addClass("hide");
+                $(".tipoPrazo").removeClass('has-error');
+                $(".motivoPrazoDet").addClass("hide");
+
+                //$("#prazoDeterminado").val("");
+                somarDiasUteis(prazoPadrao);
+
+
+            } else if ($(this).val() === 'Determinado') {
+
+                $("#tipoPrazoValid").val('0');
+                $("#prazoDeterminado").removeClass("hide");
+                $(".tipoPrazo").removeClass('has-error');
+                $(".motivoPrazoDet").removeClass("hide");
+
+            }
+        });
+
+
+        $("input[name='rdMotivoPrazo']").change(function (e) {
+
+
+            if ($(this).val() === 'outro') {
+
+                $("#rdMotivoPrazoValid").val('1');
+                $("#justificaPrazo").removeClass("hide");
+
+            } else {
+
+                $("#rdMotivoPrazoValid").val('0');
+                $("#justificaPrazo").addClass("hide");
+                $("#justificaPrazo").val("");
+            }
+
+            console.log("___ motivo: " + $(this).val());
+            console.log("___ index:" + $("#rdMotivoPrazoValid").val());
+
+        });
+
+        //Show/hide 
+        $(".rdEnvRevisao").css('display', 'none');
+        $(".zoomUsuario").css('display', 'none');
+        $(".prazo").css('display', 'none');
+        $(".zoomApoio").css('display', 'none');
+
+
+        // Tarefa Inicial
+        if (WKNumState == "4" || WKNumState == "0") {
+
+            console.log("ENTROU NO IF Tarefa Inicial");
+
+            $("#userOutro").addClass('hide');
+
+            var rdTipoPrazo = $("input[name='rdTipoPrazo']:checked").val();
+            console.log("--- rdTipoPrazo: " + rdTipoPrazo);
             
-            // Tarefa Analisar Solicitação
-            if(WKNumState == '21'){
+            if (rdTipoPrazo == undefined || rdTipoPrazo == 'prazoPadrao'){
+                console.log("--- entrou no if prazoPadrao");
+                somarDiasUteis(prazoPadrao);
+            }
 
-                $(".anotJuridico").removeClass('hide');
-                $("#descSolic").attr('readonly','readonly');
+        }
 
-                if($("#outraEmpresa").val() != ""){
-                    $("#outraEmpresa").removeClass("hide");
-                }
+        // Tarefa Analisar Solicitação
+        if (WKNumState == '21') {
 
-                if ($("#userOutro").val() == ''){
-                    
-                    $("#_userOutro").addClass('hide');
-                }
+            $(".anotJuridico").removeClass('hide');
+            $("#descSolic").attr('readonly', 'readonly');
 
-                 if($("input[name='rdTipoPrazo']").val() === 'prazoPadrao'){
+            if ($("#outraEmpresa").val() != "") {
+                $("#outraEmpresa").removeClass("hide");
+            }
 
-                  
-                    $("#prazoDeterminado").addClass("hide");
-                    $(".motivoPrazoDet").addClass("hide");
+            if ($("#userOutro").val() == '') {
 
-                } else if($("input[name='rdTipoPrazo']").val() === 'determinado'){
+                $("#_userOutro").addClass('hide');
+            }
 
-                  
-                    $("#prazoDeterminado").removeClass("hide");
-                    $(".motivoPrazoDet").removeClass("hide");
-
-                }
+            if ($("input[name='rdTipoPrazo']").val() === 'prazoPadrao') {
 
 
+                $("#prazoDeterminado").addClass("hide");
+                $(".motivoPrazoDet").addClass("hide");
 
-                if($("#categoria").val() != 'Outra'){
-                    $(".assunto2").removeClass('hide');
-                }
+            } else if ($("input[name='rdTipoPrazo']").val() === 'determinado') {
 
-                if($("#outraCategoria").val() != ""){
-                    $(".outraCategoria").removeClass('hide');
-                }
-                if($("#outroAssunto").val() != ""){
-                    $(".outroAssunto").removeClass('hide');
-                }
 
-                if($("#tipoPrazoValid").val() == "0"){
-                    $("#prazoDeterminado").removeClass("hide");
-                    $(".motivoPrazoDet").removeClass("hide");
-
-                    if($("#rdMotivoPrazoValid").val() == "1"){
-
-                        $("#justificaPrazo").removeClass('hide');
-                    }
-                }
+                $("#prazoDeterminado").removeClass("hide");
+                $(".motivoPrazoDet").removeClass("hide");
 
             }
 
 
-            // Tarefa Executar tarefa
-            if(WKNumState == '27'){
 
-                // Show Hide
-                $("#userOutro").attr("readonly","readonly");
-                $("#prazoDeterminado").attr("readonly","readonly");
-                $("#justificaPrazo").attr("readonly","readonly");
-                $("#prioridade").attr("readonly","prioridade");
-                $("#outraParte").attr("readonly","readonly");
-                
-                if($("#outraEmpresa").val() != ""){
-                    $("#outraEmpresa").removeClass("hide");
+            if ($("#categoria").val() != 'Outra') {
+                $(".assunto2").removeClass('hide');
+            }
+
+            if ($("#outraCategoria").val() != "") {
+                $(".outraCategoria").removeClass('hide');
+            }
+            if ($("#outroAssunto").val() != "") {
+                $(".outroAssunto").removeClass('hide');
+            }
+
+            if ($("#tipoPrazoValid").val() == "0") {
+                $("#prazoDeterminado").removeClass("hide");
+                $(".motivoPrazoDet").removeClass("hide");
+
+                if ($("#rdMotivoPrazoValid").val() == "1") {
+
+                    $("#justificaPrazo").removeClass('hide');
                 }
+            }
 
-                $(".anotJuridico").removeClass('hide');
-                $("#descSolic").attr('readonly','readonly');
+        }
 
-                if ($("#userOutro").val() == ''){
-                    
-                    $("#_userOutro").addClass('hide');
+
+        // Tarefa Executar tarefa
+        if (WKNumState == '27') {
+
+            // Show Hide
+            $("#userOutro").attr("readonly", "readonly");
+            $("#prazoDeterminado").attr("readonly", "readonly");
+            $("#justificaPrazo").attr("readonly", "readonly");
+            $("#prioridade").attr("readonly", "prioridade");
+            $("#outraParte").attr("readonly", "readonly");
+
+            $("input[name='rdEncaminharSolic']").removeAttr("checked");
+            $("#codApoio").val($("#codGrupo").val());
+
+            if ($("#outraEmpresa").val() != "") {
+                $("#outraEmpresa").removeClass("hide");
+            }
+
+            $(".anotJuridico").removeClass('hide');
+            $("#descSolic").attr('readonly', 'readonly');
+
+            if ($("#userOutro").val() == '') {
+
+                $("#_userOutro").addClass('hide');
+            }
+
+            if ($("#categoria").val() != 'Outra') {
+                $(".assunto2").removeClass('hide');
+            }
+
+            if ($("#outraCategoria").val() != "") {
+                $(".outraCategoria").removeClass('hide');
+            }
+            if ($("#outroAssunto").val() != "") {
+                $(".outroAssunto").removeClass('hide');
+            }
+
+            if ($("#tipoPrazoValid").val() == "0") {
+
+                console.log("## tipo valido 0");
+
+                $("#prazoDeterminado").removeClass("hide");
+                $(".motivoPrazoDet").removeClass("hide");
+
+                if ($("#rdMotivoPrazoValid").val() == "1") {
+
+                    console.log("## tipo motivo 1");
+                    $("#justificaPrazo").removeClass('hide');
                 }
+            }
 
-                if($("#categoria").val() != 'Outra'){
-                    $(".assunto2").removeClass('hide');
-                }
+            $("#prioridade").addClass('hide');
+            $("#prioridade2").removeClass('hide');
 
-                if($("#outraCategoria").val() != ""){
-                    $(".outraCategoria").removeClass('hide');
-                }
-                if($("#outroAssunto").val() != ""){
-                    $(".outroAssunto").removeClass('hide');
-                }
+            $(".empresa").addClass("hide");
+            $("#empresa2").removeClass("hide");
 
-                if($("#tipoPrazoValid").val() == "0"){
+            $(".categoria").addClass("hide");
+            $("#categoria2").removeClass("hide");
 
-                    console.log("## tipo valido 0");
+            $(".assunto").addClass("hide");
+            $("#assunto3").removeClass("hide");
 
-                    $("#prazoDeterminado").removeClass("hide");
-                    $(".motivoPrazoDet").removeClass("hide");
+            $("#outroAssunto").attr("readonly", "readonly");
+            $("#outraCategoria").attr("readonly", "readonly");
 
-                    if($("#rdMotivoPrazoValid").val() == "1"){
+            if ($("#outraCategoria").val() != "") {
+                $("#outraCategoria").removeClass("hide");
+            }
 
-                        console.log("## tipo motivo 1");
-                        $("#justificaPrazo").removeClass('hide');
-                    }
-                }
+            if ($("#outroAssunto").val() != "") {
+                $("#outroAssunto").removeClass("hide");
+            }
 
-                $(".saldoHoras").removeClass('hide');
-                $(".prazoRevisao").removeClass('hide');
-                $(".tempoDisp").removeClass('hide');
+            $(".saldoHoras").removeClass('hide');
+            $(".prazoRevisao").removeClass('hide');
+            $(".tempoDisp").removeClass('hide');
 
-                /*if($("#necAjusteValid").val() != ""){
-
-                    $(".necAjuste").removeClass('hide');
-
-                    if($("#necAjusteValid").val() == "1"){
-
-                        $("#necAjuste").removeClass("hide");
-                        $("#necAjuste").attr('readonly','readonly');
-                    }
-                }*/
-
-                $("#prioridade").addClass('hide');
-                $("#prioridade2").removeClass('hide');
-
-                $(".empresa").addClass("hide");
-                $("#empresa2").removeClass("hide");
-
-                $(".categoria").addClass("hide");
-                $("#categoria2").removeClass("hide");
-
-                $(".assunto").addClass("hide");
-                $("#assunto3").removeClass("hide");
-
-                $("#outroAssunto").attr("readonly","readonly");
-                $("#outraCategoria").attr("readonly","readonly");
-
-                if($("#outraCategoria").val() != ""){
-                    $("#outraCategoria").removeClass("hide");
-                }
-
-                if($("#outroAssunto").val() != ""){
-                    $("#outroAssunto").removeClass("hide");
-                }
-
-                $(".saldoHoras").removeClass('hide');
-                $(".prazoRevisao").removeClass('hide');
-                $(".tempoDisp").removeClass('hide');
-
-                $("#prazoRevisao").val("");
+            $("#prazoRevisao").val("");
 
 
-                // trazer hora atual para campo 
-                var fullDate = new Date();
-                var date = fullDate.getDate().toString();
-                
-                if(date.length == 1){
-                    date = 0+date;
-                }
-                var mes = (fullDate.getMonth()+1).toString();
-            
-                if(mes.length == 1){
-                    mes = 0+mes;
-                }
+            // trazer hora atual para campo 
+            var fullDate = new Date();
+            var date = fullDate.getDate().toString();
 
-                var hora = fullDate.getHours().toString();
-                var minuto = fullDate.getMinutes().toString();
-                
-                if(hora.length == 1){
-                    hora = 0+hora;
-                }
+            if (date.length == 1) {
+                date = 0 + date;
+            }
+            var mes = (fullDate.getMonth() + 1).toString();
 
-                if(minuto.length == 1){
-                    minuto = 0+minuto;
-                }
+            if (mes.length == 1) {
+                mes = 0 + mes;
+            }
 
-                var dataHora = date+"/"+mes+"/"+fullDate.getFullYear() +" "+hora+ ":"+minuto;
- 
-                $("#horaAtual").val(dataHora);
+            var hora = fullDate.getHours().toString();
+            var minuto = fullDate.getMinutes().toString();
 
-                // Pegar prazo da tarefa
-                if($("#prazoFluig").val() == ""){
-                    var c1 = DatasetFactory.createConstraint("processTaskPK.processInstanceId", WKNumProces, WKNumProces, ConstraintType.MUST);
-                    var d1 = DatasetFactory.createConstraint("active", true, true, ConstraintType.MUST);
+            if (hora.length == 1) {
+                hora = 0 + hora;
+            }
 
-                    var dataset= DatasetFactory.getDataset("processTask", null, [c1,d1], null);
+            if (minuto.length == 1) {
+                minuto = 0 + minuto;
+            }
 
-                    if(dataset.values.length > 0 ){
-                        for(var i = 0; i < dataset.values.length; i++) {
-                            
-                            var deadlineDate = dataset.values[i]["deadlineDate"];
-                            var deadlineHour = dataset.values[i]["deadlineHour"];
-                            
-                            // Data
-                            var dateSplit = deadlineDate.split("-");
+            var dataHora = date + "/" + mes + "/" + fullDate.getFullYear() + " " + hora + ":" + minuto;
 
-                            var anoDead = dateSplit[0];
-                            var mesDead = dateSplit[1];
-                            var diaDead = dateSplit[2];
+            $("#horaAtual").val(dataHora);
+
+            // Pegar prazo da tarefa
+            if ($("#prazoFluig").val() == "") {
+                var c1 = DatasetFactory.createConstraint("processTaskPK.processInstanceId", WKNumProces, WKNumProces, ConstraintType.MUST);
+                var d1 = DatasetFactory.createConstraint("active", true, true, ConstraintType.MUST);
+
+                var dataset = DatasetFactory.getDataset("processTask", null, [c1, d1], null);
+
+                if (dataset.values.length > 0) {
+                    for (var i = 0; i < dataset.values.length; i++) {
+
+                        var deadlineDate = dataset.values[i]["deadlineDate"];
+                        var deadlineHour = dataset.values[i]["deadlineHour"];
+
+                        // Data
+                        var d = new Date(deadlineDate);
+                        
+                        var anoDead = d.getFullYear().toString();
+                        var mesDead = (d.getMonth() + 1).toString();
+                        var diaDead = d.getDate().toString();
 
 
-                            // Horas
-                            var horaDeadline = duas_casas(Math.round(deadlineHour/3600));
-                            var minutoDeadline = duas_casas(Math.floor((deadlineHour%3600)/60));
-                            var horaMinutoDeadline = horaDeadline+":"+minutoDeadline;
-                            
-                            console.log("### horaMinutoDeadline: "+horaMinutoDeadline);     
-
-                            var dataHoraDead = diaDead+"/"+mesDead+"/"+anoDead +" "+horaMinutoDeadline; 
-
-                            $("#prazoFluig").val(dataHoraDead);
-                            
+                        if (diaDead <= 9) {
+                            diaDead = 0 + diaDead;
                         }
-                    }    
-                } 
 
-                  
+                        if (mesDead <= 9) {
+                            mesDead = 0 + mesDead;
+                        }
+                        console.log(diaDead + "/" + mesDead + "/" + anoDead);
+                        
+                        /*
+                        var dateSplit = deadlineDate.split("-");
+
+                        var anoDead = dateSplit[0];
+                        var mesDead = dateSplit[1];
+                        var diaDead = dateSplit[2];
+                        */
+
+                        // Horas
+                        var horaDeadline = duas_casas(Math.round(deadlineHour / 3600));
+                        var minutoDeadline = duas_casas(Math.floor((deadlineHour % 3600) / 60));
+                        var horaMinutoDeadline = horaDeadline + ":" + minutoDeadline;
+
+                        console.log("### horaMinutoDeadline: " + horaMinutoDeadline);
+
+                        var dataHoraDead = diaDead + "/" + mesDead + "/" + anoDead + " " + horaMinutoDeadline;
+
+                        $("#prazoFluig").val(dataHoraDead);
+
+                    }
+                }
             }
 
-            // Tarefa Revisar
-            if(WKNumState == '9'){
+            $(".rdEnvRevisao").css("display", "block");
 
-                console.log("teste tarefa 9");
+            $("input[name='rdEncaminharSolic']").change(function (e) {
 
-                $("#userOutro").attr("readonly","readonly");
-                $("#prazoDeterminado").attr("readonly","readonly");
-                $("#justificaPrazo").attr("readonly","readonly");
-                $("#outraParte").attr("readonly","readonly");
+                console.log("--- rdEncaminharSolic : " + $("input[name='rdEncaminharSolic']:checked").val());
 
-                $("input[name='rdNecAjuste']").removeAttr("checked");
-                $("#necAjuste").val("");
-                $("#necAjusteValid").val("");
-                
-                $("#descSolic").attr("readonly","readonly");
-                
-                $("#prioridade").addClass('hide');
-                $("#prioridade2").removeClass('hide');
-
-                $(".empresa").addClass("hide");
-                $("#empresa2").removeClass("hide");
-
-                $(".categoria").addClass("hide");
-                $("#categoria2").removeClass("hide");
-
-                $(".assunto").addClass("hide");
-                $("#assunto3").removeClass("hide");
-
-                $("#outroAssunto").attr("readonly","readonly");
-                $("#outraCategoria").attr("readonly","readonly");
-
-                if($("#outraCategoria").val() != ""){
-                    $("#outraCategoria").removeClass("hide");
+                if ($("input[name='rdEncaminharSolic']:checked").val() == 'transferir') {
+                    $(".zoomUsuario").slideDown('slow');
+                    $(".prazo").slideUp('slow');
+                    $(".zoomApoio").slideUp('slow');
+                } else if ($("input[name='rdEncaminharSolic']:checked").val() == 'revisao') {
+                    $(".prazo").slideDown('slow');
+                    $(".zoomUsuario").slideUp('slow');
+                    $(".zoomApoio").slideUp('slow');
+                } else if ($("input[name='rdEncaminharSolic']:checked").val() == 'apoio') {
+                    $(".zoomApoio").slideDown('slow');
+                    $(".zoomUsuario").slideUp('slow');
+                } else {
+                    $(".zoomUsuario").slideUp('slow');
+                    $(".zoomApoio").slideUp('slow');
+                    $(".prazo").slideUp('slow');
                 }
 
-                if($("#outroAssunto").val() != ""){
-                    $("#outroAssunto").removeClass("hide");
-                }
-            
-                $(".necAjuste").removeClass('hide');
+            });
 
-                if( $("input[name='rdNecAjuste']").val() == 'sim'){
+        }
+
+        // Tarefa Revisar
+        if (WKNumState == '9') {
+
+            console.log("teste tarefa 9");
+
+            $("#userOutro").attr("readonly", "readonly");
+            $("#prazoDeterminado").attr("readonly", "readonly");
+            $("#justificaPrazo").attr("readonly", "readonly");
+            $("#outraParte").attr("readonly", "readonly");
+
+            $("input[name='rdNecAjuste']").removeAttr("checked");
+            $("#necAjuste").val("");
+            $("#necAjusteValid").val("");
+
+            $("#descSolic").attr("readonly", "readonly");
+
+            $("#prioridade").addClass('hide');
+            $("#prioridade2").removeClass('hide');
+
+            $(".empresa").addClass("hide");
+            $("#empresa2").removeClass("hide");
+
+            $(".categoria").addClass("hide");
+            $("#categoria2").removeClass("hide");
+
+            $(".assunto").addClass("hide");
+            $("#assunto3").removeClass("hide");
+
+            $("#outroAssunto").attr("readonly", "readonly");
+            $("#outraCategoria").attr("readonly", "readonly");
+
+            if ($("#outraCategoria").val() != "") {
+                $("#outraCategoria").removeClass("hide");
+            }
+
+            if ($("#outroAssunto").val() != "") {
+                $("#outroAssunto").removeClass("hide");
+            }
+
+            $(".necAjuste").removeClass('hide');
+
+            if ($("input[name='rdNecAjuste']").val() == 'sim') {
+                $("#necAjuste").removeClass("hide");
+            }
+
+            if ($("#outraEmpresa").val() != "") {
+                $("#outraEmpresa").removeClass("hide");
+            }
+
+            $("input[name='rdNecAjuste']").change(function (e) {
+
+                if ($(this).val() === 'nao') {
+
+                    $("#necAjusteValid").val('0');
+                    $("#necAjuste").addClass("hide");
+                    $("#necAjuste").val("");
+
+                } else if ($(this).val() === 'sim') {
+
+                    $("#necAjusteValid").val('1');
                     $("#necAjuste").removeClass("hide");
                 }
-
-                if($("#outraEmpresa").val() != ""){
-                    $("#outraEmpresa").removeClass("hide");
-                }
-
-                $("input[name='rdNecAjuste']").change(function(e){
-
-                    if($(this).val() === 'nao'){
-
-                        $("#necAjusteValid").val('0');
-                        $("#necAjuste").addClass("hide");
-                        $("#necAjuste").val("");
-
-                    } else if($(this).val() === 'sim'){
-
-                        $("#necAjusteValid").val('1');
-                        $("#necAjuste").removeClass("hide");
-                    }
-                });
-
-                if($("#necAjusteValid").val() == "1"){
-                    $("#necAjuste").removeClass('hide');
-                }
-
-                if($("#tipoPrazoValid").val() == "0"){
-                    $("#prazoDeterminado").removeClass("hide");
-                    $(".motivoPrazoDet").removeClass("hide");
-
-                    if($("#rdMotivoPrazoValid").val() == "1"){
-
-                        $("#justificaPrazo").removeClass('hide');
-                    }
-                }
-
-                // regra para adicionar campo Nec ajuste na tabela pai-filho
-
-                 respbtn2()
-
-            }
-
-            setTimeout(function(){
-                $(".tag-text").css({'max-width': '100%'});
-            }, 1000);
-
-            //Regra de bloqueio de tabela pai-filho
-
-            var tabIndex = $("#indextab").val();
-
-            for( var z = 1; z <= tabIndex; z++){
-                $("#tab_obs___"+z).attr("readonly","readonly");    
-            }
-
-            var now = new Date();
-
-            var calendario = FLUIGC.calendar("#prazoDeterminado",{
-                minDate: now
             });
 
-             
-        }                           
+            if ($("#necAjusteValid").val() == "1") {
+                $("#necAjuste").removeClass('hide');
+            }
+
+            if ($("#tipoPrazoValid").val() == "0") {
+                $("#prazoDeterminado").removeClass("hide");
+                $(".motivoPrazoDet").removeClass("hide");
+
+                if ($("#rdMotivoPrazoValid").val() == "1") {
+
+                    $("#justificaPrazo").removeClass('hide');
+                }
+            }
+
+            // regra para adicionar campo Nec ajuste na tabela pai-filho
+
+            respbtn2()
+
+            // Regra para inserir valor do prazo caso não estipulado em atividade anterior
+            if ($("#prazoRevisao").val() == "") {
+                var c1 = DatasetFactory.createConstraint("processTaskPK.processInstanceId", WKNumProces, WKNumProces, ConstraintType.MUST);
+                var d1 = DatasetFactory.createConstraint("active", true, true, ConstraintType.MUST);
+
+                var dataset = DatasetFactory.getDataset("processTask", null, [c1, d1], null);
+
+                if (dataset.values.length > 0) {
+                    for (var i = 0; i < dataset.values.length; i++) {
+
+                        var deadlineDate = dataset.values[i]["deadlineDate"];
+                        var deadlineHour = dataset.values[i]["deadlineHour"];
+
+                        // Data
+                        var d = new Date(deadlineDate);
+                        //console.log(deadlineDate);
+                        
+                        // Data
+                        //var dateSplit = deadlineDate.split("-");
+                        /*
+                        var anoDead = dateSplit[0];
+                        var mesDead = dateSplit[1];
+                        var diaDead = dateSplit[2];*/
+
+                        var anoDead = d.getFullYear().toString();
+                        var mesDead = (d.getMonth() +1).toString();
+                        var diaDead = d.getDate().toString();
+
+
+                        // Horas
+                        var horaDeadline = duas_casas(Math.round(deadlineHour / 3600));
+                        var minutoDeadline = duas_casas(Math.floor((deadlineHour % 3600) / 60));
+                        var horaMinutoDeadline = horaDeadline + ":" + minutoDeadline;
+
+                        console.log("### horaMinutoDeadline: " + horaMinutoDeadline);
+
+                        var dataHoraDead = diaDead + "/" + mesDead + "/" + anoDead + " " + horaMinutoDeadline;
+
+                        $("#prazoRevisao").val(dataHoraDead);
+
+                    }
+                }
+            }
+
+            if ($("#codApoio").val() != "") {
+                $("#userAtivoExecTarefa").val($("#codApoio").val());
+                $("#codGrupo").val($("#codApoio").val());
+            }
+
+        }
+
+        if (WKNumState == 44) {
+            // Show Hide
+            $("#userOutro").attr("readonly", "readonly");
+            $("#prazoDeterminado").attr("readonly", "readonly");
+            $("#justificaPrazo").attr("readonly", "readonly");
+            $("#prioridade").attr("readonly", "prioridade");
+            $("#outraParte").attr("readonly", "readonly");
+
+            $("input[name='rdEncaminharSolic']").removeAttr("checked");
+            $("#codApoio").val($("#codGrupo").val());
+
+            if ($("#outraEmpresa").val() != "") {
+                $("#outraEmpresa").removeClass("hide");
+            }
+
+            $(".anotJuridico").removeClass('hide');
+            $("#descSolic").attr('readonly', 'readonly');
+
+            if ($("#userOutro").val() == '') {
+
+                $("#_userOutro").addClass('hide');
+                $("#userOutro").addClass('hide');
+            }
+
+            if ($("#categoria").val() != 'Outra') {
+                $(".assunto2").removeClass('hide');
+            }
+
+            if ($("#outraCategoria").val() != "") {
+                $(".outraCategoria").removeClass('hide');
+            }
+            if ($("#outroAssunto").val() != "") {
+                $(".outroAssunto").removeClass('hide');
+            }
+
+            if ($("#tipoPrazoValid").val() == "0") {
+
+                console.log("## tipo valido 0");
+
+                $("#prazoDeterminado").removeClass("hide");
+                $(".motivoPrazoDet").removeClass("hide");
+
+                if ($("#rdMotivoPrazoValid").val() == "1") {
+
+                    console.log("## tipo motivo 1");
+                    $("#justificaPrazo").removeClass('hide');
+                }
+            }
+
+            $("#prioridade").addClass('hide');
+            $("#prioridade2").removeClass('hide');
+
+            $(".empresa").addClass("hide");
+            $("#empresa2").removeClass("hide");
+
+            $(".categoria").addClass("hide");
+            $("#categoria2").removeClass("hide");
+
+            $(".assunto").addClass("hide");
+            $("#assunto3").removeClass("hide");
+
+            $("#outroAssunto").attr("readonly", "readonly");
+            $("#outraCategoria").attr("readonly", "readonly");
+
+            if ($("#outraCategoria").val() != "") {
+                $("#outraCategoria").removeClass("hide");
+            }
+
+            if ($("#outroAssunto").val() != "") {
+                $("#outroAssunto").removeClass("hide");
+            }
+
+            $(".saldoHoras").removeClass('hide');
+            $(".prazoRevisao").removeClass('hide');
+            $(".tempoDisp").removeClass('hide');
+
+            var arrayApoio = $("#arrayApoio").val().split(',');
+
+            arrayApoio.shift();
+
+            console.log("--- Arrayapoio.length: "+ arrayApoio.length);
+            
+            arrayApoio.push($("#apoio2").val());
+
+            console.log(arrayApoio);
+
+            $("#arrayApoio").val(arrayApoio);
+        }
+
+        setTimeout(function () {
+            $(".tag-text").css({ 'max-width': '100%' });
+        }, 1000);
+
+        //Regra de bloqueio de tabela pai-filho
+
+        var tabIndex = $("#indextab").val();
+
+        for (var z = 1; z <= tabIndex; z++) {
+            $("#tab_obs___" + z).attr("readonly", "readonly");
+        }
+
+        var now = new Date();
+
+        var calendario = FLUIGC.calendar("#prazoDeterminado", {
+            minDate: now
+        });
+
+
+    }
 };
 
 
-function setSelectedZoomItem(selectedItem) {     
+function setSelectedZoomItem(selectedItem) {
 
     console.log(selectedItem);
 
-    if(selectedItem.inputName == "empresa"){
-        $(".tag-text").css({'max-width': '100%'});
+    if (selectedItem.inputName == "empresa") {
+        $(".tag-text").css({ 'max-width': '100%' });
         $("#empresa2").val(selectedItem.ORG_ST_NOME);
 
-        if(selectedItem.ORG_ST_NOME == "OUTRA"){
+        if (selectedItem.ORG_ST_NOME == "OUTRA") {
             $(".outraEmpresa").removeClass("hide");
-        }else{
+        } else {
             $(".outraEmpresa").addClass("hide");
         }
     }
 
-    if(selectedItem.inputName == "categoria"){
+    if (selectedItem.inputName == "categoria") {
 
-        $(".tag-text").css({'max-width': '100%'});
+        $(".tag-text").css({ 'max-width': '100%' });
         var categoria = $("#categoria").val();
 
         $("#categoria2").val(selectedItem.categoria);
 
 
-        if(selectedItem.categoria == "Outra"){
+        if (selectedItem.categoria == "Outra") {
             $(".outraCategoria").removeClass('hide');
             $(".outroAssunto").removeClass('hide');
             $("#assunto").val('');
-            $("#codGrupo").val('Pool:Group:BPM-005-JURI_grupo_18');
+            $("#codGrupo").val('Pool:Group:BPM-005-Outros');
             $(".assunto2").addClass('hide');
             $("#outroAssunto").val('');
-        }else{
-            $("#assunto").removeAttr('disabled','disabled');
+        } else {
+            $("#assunto").removeAttr('disabled', 'disabled');
             $("#outraCategoria").val('');
             $(".outraCategoria").addClass('hide');
             $(".outroAssunto").addClass('hide');
@@ -504,35 +687,48 @@ function setSelectedZoomItem(selectedItem) {
 
         $("#assunto").val('');
 
-      
-        reloadZoomFilterValues('assunto', 'categoria,' +categoria );
+
+        reloadZoomFilterValues('assunto', 'categoria,' + categoria);
         //console.log("--- categoria : "+ categoria[0]);
     }
 
-    if(selectedItem.inputName == "assunto"){
+    if (selectedItem.inputName == "assunto") {
 
-        $(".tag-text").css({'max-width': '100%'});
+        $(".tag-text").css({ 'max-width': '100%' });
         $("#codGrupo").val(selectedItem.CODGRUPO);
         $("#assunto3").val(selectedItem.assunto);
 
-        if(selectedItem.assunto == "Outros"){
+        if (selectedItem.assunto == "Outros") {
             $(".outroAssunto").removeClass('hide');
-        }else{
+        } else {
             $("#outroAssunto").val('');
             $(".outroAssunto").addClass('hide');
         }
     }
-   
+
+    if (selectedItem.inputName == 'apoio') {
+        console.log("-- selectedItem.codigo: " + selectedItem.codigo);
+        // $("#codGrupo").val(selectedItem.codigo);
+        var cod = selectedItem.codigo;
+        $("#codGrupo").val(cod);
+        $("#userAtivoExecTarefa").val(cod);
+    }
+
+    if (selectedItem.inputName == 'apoio2') {
+        var cod2 = selectedItem.codigo;
+        $("#codApoio2").val(cod2);
+    }
+
 }
 
-function duas_casas(numero){
-    if (numero <= 9){
-        numero = "0"+numero;
+function duas_casas(numero) {
+    if (numero <= 9) {
+        numero = "0" + numero;
     }
     return numero;
 }
 
-function blurFunction(){
+function blurFunction() {
 
     //console.log("--- blurFunction ---");
 
@@ -542,155 +738,184 @@ function blurFunction(){
     var prazoFluig = prazoFluig.split(" ");
     var prazoRevisao = prazoRevisao.split(" ");
 
-    var data1 = new Date(prazoFluig[0].replace(/(\d{2})\/(\d{2})\/(\d{4})/,'$2/$1/$3'));
-    var data2 = new Date(prazoRevisao[0].replace(/(\d{2})\/(\d{2})\/(\d{4})/,'$2/$1/$3'));
+    var data1 = new Date(prazoFluig[0].replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$2/$1/$3'));
+    var data2 = new Date(prazoRevisao[0].replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$2/$1/$3'));
 
-    if(data2 > data1){
-       
+    if (data2 > data1) {
+
         $(".alert").removeClass('hide');
-    }else{
+    } else {
 
         $(".alert").addClass('hide');
     }
 }
 
-function blurFunction2(){
+function blurFunction2() {
 
     //console.log("--- blurFunction ---");
 
-    if($("#btnObs").is(':disabled')){
+    if ($("#btnObs").is(':disabled')) {
         console.log("---- if blur ---");
         var indexblur = $("#indextab").val();
         indexblur--;
 
-        $("#tab_obs___"+indexblur).val("Ajuste solicitado: "+$("#necAjuste").val());
-    
-    }else{
+        $("#tab_obs___" + indexblur).val("Ajuste solicitado: " + $("#necAjuste").val() + "\nPrazo para revisão: " + $("#prazoRevisao").val());
+
+    } else {
 
         console.log("---- else blur ---");
-        $("#tab_obs___"+$("#indextab").val()).val("Ajuste solicitado: "+$("#necAjuste").val());
+        $("#tab_obs___" + $("#indextab").val()).val("Ajuste solicitado: " + $("#necAjuste").val() + "\nPrazo para revisão: " + $("#prazoRevisao").val());
     }
 
 }
 
-function focusFunction(){
-    
-    if($("#btnObs").is(':disabled')){
+function focusFunction() {
+
+    if ($("#btnObs").is(':disabled')) {
 
         console.log("---- if focus ---");
 
-         var indexfocus = $("#indextab").val();
+        var indexfocus = $("#indextab").val();
         indexfocus--;
 
-        $("#tab_obs___"+indexfocus).val("");
-    }else{
+        $("#tab_obs___" + indexfocus).val("");
+    } else {
         console.log("---- else focus ---");
-        $("#tab_obs___"+$("#indextab").val()).val("");
-    }    
+        $("#tab_obs___" + $("#indextab").val()).val("");
+    }
 }
 
 
 // Função para criar linhas na tabela 
-function respbtn(){
+function respbtn() {
 
     wdkAddChild('tabObs');
 
-     var index = $("#indextab").val();
+    var index = $("#indextab").val();
 
     index++;
 
     $("#indextab").val(index);
 
-    $("#btnObs").attr("disabled",'disabled');
+    $("#btnObs").attr("disabled", 'disabled');
 
 
     var now = new Date();
     // console.log("FRE..." + now.getDay());
-    
-    var nowDate     = now.getDate();
+
+    var nowDate = now.getDate();
     var nowMonth = now.getMonth() + 1;
-    var nowYear     = now.getFullYear();
-    
-    if(nowMonth < 10){
-        nowMonth = "0"+nowMonth;
+    var nowYear = now.getFullYear();
+
+    if (nowMonth < 10) {
+        nowMonth = "0" + nowMonth;
     }
-    
-    if(nowDate < 10){
-        nowDate = "0"+nowDate;
+
+    if (nowDate < 10) {
+        nowDate = "0" + nowDate;
     }
 
     var hora = now.getHours().toString();
     var minuto = now.getMinutes().toString();
-    
-    if(hora.length == 1){
-        hora = 0+hora;
+
+    if (hora.length == 1) {
+        hora = 0 + hora;
     }
 
-    if(minuto.length == 1){
-        minuto = 0+minuto;
+    if (minuto.length == 1) {
+        minuto = 0 + minuto;
     }
 
-  //  var dataHora = date+"/"+mes+"/"+fullDate.getFullYear() +" "+hora+ ":"+minuto;
+    //  var dataHora = date+"/"+mes+"/"+fullDate.getFullYear() +" "+hora+ ":"+minuto;
 
     //console.log("--- index :"+ index);
-    $("#tab_data___"+index).val(nowDate+"/"+nowMonth+"/"+nowYear+" "+hora+":"+minuto);
-    $("#tab_autor___"+index).val($("#userAtivo").val());
-    
+    $("#tab_data___" + index).val(nowDate + "/" + nowMonth + "/" + nowYear + " " + hora + ":" + minuto);
+    $("#tab_autor___" + index).val($("#userAtivo").val());
+
     //console.log("#### validaData - Dia: "+ nowDate + " Mês: "+nowMonth + " Ano: "+nowYear);
 
 }
 
-function respbtn2(){
+function respbtn2() {
 
     wdkAddChild('tabObs');
 
-     var index = $("#indextab").val();
+    var index = $("#indextab").val();
 
     index++;
 
     $("#indextab").val(index);
 
-   // $("#btnObs").attr("disabled",'disabled');
+    // $("#btnObs").attr("disabled",'disabled');
 
 
     var now = new Date();
     // console.log("FRE..." + now.getDay());
-    
-    var nowDate     = now.getDate();
+
+    var nowDate = now.getDate();
     var nowMonth = now.getMonth() + 1;
-    var nowYear     = now.getFullYear();
-    
-    if(nowMonth < 10){
-        nowMonth = "0"+nowMonth;
+    var nowYear = now.getFullYear();
+
+    if (nowMonth < 10) {
+        nowMonth = "0" + nowMonth;
     }
-    
-    if(nowDate < 10){
-        nowDate = "0"+nowDate;
+
+    if (nowDate < 10) {
+        nowDate = "0" + nowDate;
     }
 
     var hora = now.getHours().toString();
     var minuto = now.getMinutes().toString();
-    
-    if(hora.length == 1){
-        hora = 0+hora;
+
+    if (hora.length == 1) {
+        hora = 0 + hora;
     }
 
-    if(minuto.length == 1){
-        minuto = 0+minuto;
+    if (minuto.length == 1) {
+        minuto = 0 + minuto;
     }
 
-  //  var dataHora = date+"/"+mes+"/"+fullDate.getFullYear() +" "+hora+ ":"+minuto;
+    //  var dataHora = date+"/"+mes+"/"+fullDate.getFullYear() +" "+hora+ ":"+minuto;
 
     //console.log("--- index :"+ index);
-    $("#tab_data___"+index).val(nowDate+"/"+nowMonth+"/"+nowYear+" "+hora+":"+minuto);
-    $("#tab_autor___"+index).val($("#userAtivo").val());
+    $("#tab_data___" + index).val(nowDate + "/" + nowMonth + "/" + nowYear + " " + hora + ":" + minuto);
+    $("#tab_autor___" + index).val($("#userAtivo").val());
 
 
-    $("#tab_obs___"+index).addClass("hide");
-    $("#tab_data___"+index).addClass("hide");
-    $("#tab_autor___"+index).addClass("hide");
-    
+    $("#tab_obs___" + index).addClass("hide");
+    $("#tab_data___" + index).addClass("hide");
+    $("#tab_autor___" + index).addClass("hide");
+
 
     //console.log("#### validaData - Dia: "+ nowDate + " Mês: "+nowMonth + " Ano: "+nowYear);
 
+}
+
+function somarDiasUteis(prazoPadrao){
+    
+    var now = new Date();
+
+    for(var x = 1; x <= prazoPadrao; x++){
+        
+        if (now.getDay() == 6 || now.getDay() == 0){
+            now.setDate(now.getDate() + 1);
+            x--;
+        }else{
+            now.setDate(now.getDate() + 1);            
+        }
+    }
+
+    if (now.getDay() == 6 ){
+        now.setDate(now.getDate() + 2);
+    } else if (now.getDay() == 0){
+        now.setDate(now.getDate() + 1);
+    }
+
+    var dia = duas_casas(now.getDate());
+    var mes = duas_casas(now.getMonth()+1);
+    var ano = now.getFullYear();
+    
+    $("#prazoDeterminado").val(dia + "/" + mes + "/" + ano);
+    console.log("--- prazoDeterminado: " + $("#prazoDeterminado").val());
+    
 }
