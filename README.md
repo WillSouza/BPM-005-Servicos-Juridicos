@@ -21,31 +21,31 @@
 	- BPM-005-Categoria
 
 8. Criar Grupos:
-		Código						Descrição
-		BPM-005-Adm					Administrador BPM-005
-		BPM-005-Juridico			Jurídico global
-		BPM-005-JURI_grupo_1 		Grupo 1 do Jurídico
-		BPM-005-JURI_grupo_2 		Grupo 2 do Jurídico
-		BPM-005-JURI_grupo_3 		Grupo 3 do Jurídico
-		BPM-005-JURI_grupo_4 		Grupo 4 do Jurídico
-		BPM-005-JURI_grupo_5 		Grupo 5 do Jurídico
-		BPM-005-JURI_grupo_6 		Grupo 6 do Jurídico
-		BPM-005-JURI_grupo_7 		Grupo 7 do Jurídico
-		BPM-005-JURI_grupo_8 		Grupo 8 do Jurídico
-		BPM-005-JURI_grupo_9 		Grupo 9 do Jurídico
-		BPM-005-JURI_grupo_10 		Grupo 10 do Jurídico
-		BPM-005-JURI_grupo_11 		Grupo 11 do Jurídico
-		BPM-005-JURI_grupo_12 		Grupo 12 do Jurídico	
-		BPM-005-JURI_grupo_13 		Grupo 13 do Jurídico
-		BPM-005-JURI_grupo_14 		Grupo 14 do Jurídico
-		BPM-005-JURI_grupo_15 		Grupo 15 do Jurídico
-		BPM-005-JURI_grupo_16 		Grupo 16 do Jurídico
-		BPM-005-JURI_grupo_17 		Grupo 17 do Jurídico
-		BPM-005-JURI_grupo_18 		Grupo 18 do Jurídico
-		BPM-005-JURI_grupo_19 		Grupo 19 do Jurídico
-		BPM-005-JURI_grupo_20 		Grupo 20 do Jurídico
-		BPM-005-JURI_grupo_21 		Grupo 21 do Jurídico
-		BPM-005-JURI_grupo_22 		Grupo 22 do Jurídico
+		<br/>Código						Descrição
+		<br/>BPM-005-Adm   					Administrador BPM-005
+		<br/>BPM-005-Juridico	   		Jurídico global
+		<br/>BPM-005-JURI_grupo_1    	Grupo 1 do Jurídico
+		<br/>BPM-005-JURI_grupo_2 	   	Grupo 2 do Jurídico
+		<br/>BPM-005-JURI_grupo_3   	Grupo 3 do Jurídico
+		<br/>BPM-005-JURI_grupo_4   	Grupo 4 do Jurídico
+		<br/>BPM-005-JURI_grupo_5   	Grupo 5 do Jurídico
+		<br/>BPM-005-JURI_grupo_6    	Grupo 6 do Jurídico
+		<br/>BPM-005-JURI_grupo_7       Grupo 7 do Jurídico
+		<br/>BPM-005-JURI_grupo_8   	Grupo 8 do Jurídico
+		<br/>BPM-005-JURI_grupo_9   	Grupo 9 do Jurídico
+		<br/>BPM-005-JURI_grupo_10   	Grupo 10 do Jurídico
+		<br/>BPM-005-JURI_grupo_11   	Grupo 11 do Jurídico
+		<br/>BPM-005-JURI_grupo_12   	Grupo 12 do Jurídico	
+		<br/>BPM-005-JURI_grupo_13      Grupo 13 do Jurídico
+		<br/>BPM-005-JURI_grupo_14      Grupo 14 do Jurídico
+		<br/>BPM-005-JURI_grupo_15   	Grupo 15 do Jurídico
+		<br/>BPM-005-JURI_grupo_16   	Grupo 16 do Jurídico
+		<br/>BPM-005-JURI_grupo_17   	Grupo 17 do Jurídico
+		<br/>BPM-005-JURI_grupo_18      Grupo 18 do Jurídico
+		<br/>BPM-005-JURI_grupo_19   	Grupo 19 do Jurídico
+		<br/>BPM-005-JURI_grupo_20   	Grupo 20 do Jurídico
+		<br/>BPM-005-JURI_grupo_21   	Grupo 21 do Jurídico
+		<br/>BPM-005-JURI_grupo_22   	Grupo 22 do Jurídico
 		
 9. Exportar o formulário BPM-005-Servicos-Juridico		
 
