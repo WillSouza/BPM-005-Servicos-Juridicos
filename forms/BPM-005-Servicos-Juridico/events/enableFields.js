@@ -30,7 +30,7 @@ function enableFields(form){
         
 	}*/
 	
-	if(activity == 27){
+	if(activity == 27 || activity == 44){
 		
 		form.setEnabled('rdNecAjuste',false);
         form.setEnabled('rdSolicOriginal', false);
