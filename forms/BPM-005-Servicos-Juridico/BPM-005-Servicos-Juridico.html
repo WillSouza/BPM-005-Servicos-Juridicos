@@ -1,635 +1,666 @@
 <html>
+
 <head>
-<link type="text/css" rel="stylesheet"  href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
-<script type="text/javascript"  src="/portal/resources/js/jquery/jquery.js"></script>
-<script type="text/javascript"  src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
-<script type="text/javascript"  src="/portal/resources/js/mustache/mustache-min.js"></script>
-<script type="text/javascript"  src="/portal/resources/style-guide/js/fluig-style-guide.min.js"  charset="utf-8"></script>
+	<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 
-<script type="text/javascript" src="../vcXMLRPC.js"></script>
-<script type="text/javascript" src="main.js" charset="utf-8"></script>
-
-<style>
-	  /* fieldset*/
-		.bs-box {
-			border-color: #e5e5e5 #eee #eee;
-			border-style: solid;
-			border-width: 1px 0;
-			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
-			margin: 0 -15px 15px;
-			padding: 45px 15px 15px;
-			position: relative;
-		}
-		.bs-box:after {
-			color: #959595;
-			content: "";
-			font-size: 12px;
-			font-weight: 700;
-			left: 15px;
-			letter-spacing: 1px;
-			position: absolute;
-			text-transform: uppercase;
-			top: 15px;
-		}
-		.bs-box + .highlight {
-			border-radius: 0;
-			border-width: 0 0 1px;
-			margin: -15px -15px 15px;
-		}
-		@media (min-width: 768px) {
-			.bs-box {
-				background-color: #fff;
-				border-color: #ddd;
-				border-radius: 4px 4px 0 0;
-				border-width: 1px;
-				box-shadow: none;
-				margin-left: 0;
-				margin-right: 0;
-			}
-			.bs-box + .highlight {
-				border-bottom-left-radius: 4px;
-				border-bottom-right-radius: 4px;
-				border-width: 1px;
-				margin-left: 0;
-				margin-right: 0;
-				margin-top: -16px;
-			}
-		}
-		.bs-box .container {
-			width: auto;
-		}
-		/* box tabs*/
-		.bs-box-tabs {
-			border-color: #e5e5e5 #eee #eee;
-			border-style: solid;
-			border-width: 1px 0;
-			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
-			margin: 0 -15px 15px;
-			padding: 45px 15px 15px;
-			position: relative;
-		}
-		.bs-box-tabs:after {
-			color: #959595;
-			content: "";
-			font-size: 12px;
-			font-weight: 700;
-			left: 15px;
-			letter-spacing: 1px;
-			position: absolute;
-			text-transform: uppercase;
-			top: 15px;
-		}
-		.bs-box-tabs + .highlight {
-			border-radius: 0;
-			border-width: 0 0 1px;
-			margin: -15px -15px 15px;
-		}
-		@media (min-width: 768px) {
-			.bs-box-tabs {
-				background-color: #fff;
-				border-color: #ddd;
-				border-radius: 4px 4px 0 0;
-				border-width: 1px;
-				box-shadow: none;
-				margin-left: 0;
-				margin-right: 0;
-			}
-			.bs-box-tabs + .highlight {
-				border-bottom-left-radius: 4px;
-				border-bottom-right-radius: 4px;
-				border-width: 1px;
-				margin-left: 0;
-				margin-right: 0;
-				margin-top: -16px;
-			}
-		}
-		.bs-box-tabs .container {
-			width: auto;
-		}
-		
-		fieldset {
-			margin-top: 20px;
-		}
-		.title {
-			margin-bottom: 15px;
-		}
-		#logo {
-			width: auto;
-		}
-		legend {
-			-moz-border-bottom-colors: none;
-			-moz-border-left-colors: none;
-			-moz-border-right-colors: none;
-			-moz-border-top-colors: none;
-			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
-			border-image: none;
-			border-style: none none solid;
-			border-width: 0 0 1px;
-			color: #FF9900;
-			display: block;
-			font-size: 10px;
-			line-height: inherit;
-			margin-bottom: 20px;
-			padding: 0;
-			width: 100%;
-			text-transform: uppercase;
-		}
-		span.help-block:empty{
-		display: none; 
-		}
-		.box {
-		 width: 50%;
-		 float: left;
-		 height: 130px;/*Altura da linha*/
-        -webkit-transform:rotate(340deg); //tente 90 no lugar de 270
-	    -moz-transform:rotate(10deg);
-	    -o-transform: rotate(10deg);
-		}
-		  span.help-block:empty{
-		  display: none; 
-		  }
-		  
-		  .input-group-addon {
-			 padding: 6px 3px;
-			}
-			.glyphicon {
-			 font-size: 10px;
-		  }
-		  .radio-inline span.help-block{
-			   display: none; 
-			 }
-			textarea {
- 			 resize: none;
-		  }	  
-		 
-
-</style>
+	<script type="text/javascript" src="../vcXMLRPC.js">
+	</script><link id="css" rel="stylesheet" type="text/css" href="style.css" />
+	
 
 </head>
+
 <body>
-<div class="fluig-style-guide">
+	<div class="fluig-style-guide">
 
-	<div class="container">
-	
-		<div class="row title" align="center">
-			<div class="row">
-				<div class="col-md-4">
-					<img src="logo.jpg" style="width: 200px" class="img-responsive" id="logo"/>
+	<!-- 	<div class="container"> -->
+
+			<div class="row title" align="center">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="logo.jpg" style="width: 200px" class="img-responsive" id="logo" />
+					</div>
+					<div class="col-md-5">
+						<div style="margin-top: 15%;">
+							<h2><strong>Servi&ccedil;o jur&iacute;dico</strong></h2>
+						</div>
+					</div>
+					<div class="col-md-3">
+
+					</div>
 				</div>
-				<div class="col-md-5">
-					<div style="margin-top: 15%;"><h2><strong>Servi&ccedil;o jur&iacute;dico</strong></h2></div>
-				</div>
-				<div class="col-md-3">
-					
-				</div>
-			</div>
-			<br/><br/>
-		</div> <!-- Fim da div row title -->
+				<br /><br />
+			</div> <!-- Fim da div row title -->
 
-		<form class="form-horizontal" name="form" id="form" role="form" novalidate="novalidate" >
+			<form class="form-horizontal" name="form" id="form" role="form" novalidate="novalidate">
 
-			<input type="text" name="userAtivo" id="userAtivo" class="hide" />
-			<input type="text" name="userAtivoExecTarefa" id="userAtivoExecTarefa" class="hide" />
-			<input type="text" name="ident" id="ident" class="hide" />
-
-			<div class="tab-content">
-				<div class="bs-box-tabs" id="tabs">
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<label for="solicitante" class="control-label">Solicitante</label>
-								<input type="text" name="solicitante" id="solicitante" class="form-control" readonly />
-							</div>
-						</div>	
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-3 col-lg-3">
-								<label for="dataSolic" class="control-label">Data da solicita&ccedil;&atilde;o</label>
-								<input type="text" name="dataSolic" id="dataSolic" class="form-control" readonly />
-							</div>	
-						</div>
-
-					</div>	
-
-					<div class="form-group">
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field ">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4 " >
-								<label for="solicOriginal" class="control-label">Quem &eacute; o solicitante origin&aacute;rio?</label>
-								<div class="radio solicOriginal">
-				              		<label class="rdSolicOriginal "><input type="radio" name="rdSolicOriginal" id="rdSolicOriginal" value="userSolic" ><strong>Usu&aacute;rio solicitante</strong></label>
-				              		<br/>
-				              		<br/>
-				              		<label class="rdSolicOriginal "><input type="radio" name="rdSolicOriginal" id="rdSolicOriginal" value="outro" ><strong>Outro</strong></label>
-				              		<div class="userOutro"> 
-				              			<input type="text" name="userOutro" id="userOutro" class="form-control  " placeholder="Nome do solicitante origin&aacute;rio" style="float: right;" />
-				              		</div>
-					            </div>
-					            <input type="text" name="solicOriginalValid" id="solicOriginalValid" class="hide" >
-					        </div>
-						</div>	
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<div class="necAjuste hide">
-									<label for="necAjuste" class="control-label">Necessita ajustes?<span class="required text-danger"><strong>*</strong></span></label>
-									<div class="radio">
-					              		<label class="rdNecAjuste "><input type="radio" name="rdNecAjuste" id="rdNecAjuste" value="nao" ><strong>N&atilde;o</strong> (solicita&ccedil;&atilde;o ser&aacute; finalizada)</label>
-					              		<br/>
-					              		<br/>
-					              		<label class="rdNecAjuste "><input type="radio" name="rdNecAjuste" id="rdNecAjuste" value="sim" ><strong>Sim</strong> (solicita&ccedil;&atilde;o retornar&aacute; ao Jur&iacute;dico)</label>				              		
-						            </div>
-						            <input type="text" name="necAjusteValid" id="necAjusteValid" class=" hide">
-						        </div>    
-					        </div>
-						</div>
-
-						
-					</div>	
-
-					<div class="form-group">
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-3 col-lg-3">
-								<div class="">
-									<label for="tipoPrazo" class="control-label">Tipo de prazo</label>
-									<div class="radio tipoPrazo">
-					              		<label class="rdTipoPrazo "><input type="radio" name="rdTipoPrazo" id="rdTipoPrazo" value="prazoPadrao" ><strong>Padr&atilde;o (at&eacute; 10 dias &uacute;teis)</strong></label>
-					              		<br/>
-					              		<br/>
-					              		<label class="rdTipoPrazo "><input type="radio" name="rdTipoPrazo" id="rdTipoPrazo" value="determinado" ><strong>Determinado</strong></label>
-					              		<div class="prazoDeterminado">
-					              			<input type="text" name="prazoDeterminado" id="prazoDeterminado" class="form-control hide" placeholder="Insira prazo" mask="00/00/0000" />
-					              		</div>	
-						            </div>
-					            	<input type="text" name="tipoPrazoValid" id="tipoPrazoValid" class="hide">
-					            </div>	
-					        </div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-md-2 col-lg-2"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">								
-								<textarea rows="4" name="necAjuste" id="necAjuste" class="form-control hide" placeholder="Especificar ajustes*" style="margin-top: 2%;" onblur="blurFunction2()" onfocus="focusFunction()"></textarea>
-							</div>
-						</div>	
-						
-					</div>
-
-					<div class="form-group">
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field motivoPrazoDet hide">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<label for="rdMotivoPrazo" class="control-label">Identifique o motivo do prazo determinado</label>
-								<div class="radio rdMotivoPrazo">
-				              		<label class="rdMotivoPrazo "><input type="radio" name="rdMotivoPrazo" id="rdMotivoPrazo" value="judicial" ><strong>Judicial</strong></label>  		
-				              		<br/>
-				              		<label class="rdMotivoPrazo "><input type="radio" name="rdMotivoPrazo" id="rdMotivoPrazo" value="legal" ><strong>Legal</strong></label>
-				              		<br/>
-				              		<label class="rdMotivoPrazo "><input type="radio" name="rdMotivoPrazo" id="rdMotivoPrazo" value="contratual" ><strong>Contratual</strong></label>
-				              		<br/>
-				              		<label class="rdMotivoPrazo "><input type="radio" name="rdMotivoPrazo" id="rdMotivoPrazo" value="outro" ><strong>Outro</strong></label>
-					            </div>
-					            <input type="text" name="rdMotivoPrazoValid" id="rdMotivoPrazoValid" class="hide">
-					        </div>
-						</div>	
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field justificaPrazo">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<textarea rows="4" class="form-control hide" id="justificaPrazo" name="justificaPrazo" placeholder="Justifique*" style="margin-top: 10%;"></textarea>			
-							</div>
-						</div>
-						
-					</div>
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<label for="prioridade" class="control-label">Prioridade<span class="required text-danger"><strong>*</strong></span></label>
-								<div class="prioridade">
-									<input type="text" name="prioridade2" id="prioridade2" class="form-control hide" readonly />
-									<select name="prioridade" id="prioridade" class="form-control" >
-										<option value="0">-</option>
-										<option value="4">Normal</option>
-										<option value="3">Urgente</option>
-										<option value="2">Importante</option>
-										<option value="1">Importante e urgente</option>
-									</select>	
-								</div>	
-							</div>
-						</div>	
-					</div>
-
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
-								<label for="empresa" class="control-label">Empresa<span class="required text-danger"><strong>*</strong></span></label>
-								<input type="text" class="form-control hide" name="empresa2" id="empresa2" readonly />
-								<div class="empresa">
-									<input type="zoom" class="form-control" name="empresa" id="empresa" 
-										data-zoom="{
-											'displaykey': 'ORG_ST_NOME',
-											'datasetId': 'BPM-005-BD-MEGA-ViewEmpresa',
-											'fields': [
-												{
-													'field': 'ORG_ST_NOME',
-													'label': 'Empresa',
-													'filterValues': 'ORG_ST_NOME',
-													'standard': 'true'
-												}	
-											]	
-										}"
-									/>
-								</div>			
-							</div>
-						</div>	
-					</div>	
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
-								<div class="outraEmpresa hide">
-									<label for="outraEmpresa" class="control-label">Outra empresa<span class="required text-danger"><strong>*</strong></span></label>
-									<input type="text" class="form-control" name="outraEmpresa" id="outraEmpresa" />
-								</div>	
-							</div>
-						</div>	
-					</div>	
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
-								<label for="outraParte" class="control-label">Outra parte<span class="required text-danger"><strong>*</strong></span></label>
-								<div class="outraParte">
-									<input type="text" class="form-control" name="outraParte" id="outraParte" style="text-transform: uppercase;" placeholder="Exemplos: clientes, fornecedor" />
-								</div>	
-							</div>
-						</div>	
-					</div>	
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<label for="categoria" class="control-label">Categoria<span class="required text-danger"><strong>*</strong></span></label>
-								<input type="text" class="form-control hide" name="categoria2" id="categoria2" readonly />
-								<div class="categoria">
-									<input type="zoom" class="form-control" name="categoria" id="categoria" 
-										data-zoom="{
-											'displaykey': 'categoria',
-											'datasetId': 'BPM-005-Categoria',
-											'fields': [
-												{
-													'field': 'categoria',
-													'label': 'Categoria',
-													'filterValues': 'categoria',
-													'standard': 'true'
-												}	
-											]	
-										}"
-									/>
-								</div>	
-							</div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>	
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4 ">
-								<div class=" outraCategoria hide">
-									<label for="outraCategoria" class="control-label">Outra categoria<span class="required text-danger"><strong>*</strong></span></label>
-									<div class="outraCategoria">
-										<input type="text" class="form-control" name="outraCategoria" id="outraCategoria" style="text-transform: uppercase;" />
-									</div>	
-								</div>	
-							</div>
-						</div>
-					</div>	
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<div class="assunto2 hide">
-									<label for="assunto" class="control-label">Assunto<span class="required text-danger"><strong>*</strong></span></label>
-									<input type="text" name="codGrupo" id="codGrupo" class="hide" readonly />
-									<input type="text"  class="form-control hide" name="assunto3" id="assunto3" readonly/>
-									<div class="assunto">	
-										<input type="zoom" class="form-control" name="assunto" id="assunto" 
-											data-zoom="{
-												'displaykey': 'assunto',
-												'datasetId': 'BPM-005-Assunto',
-												'fields': [
-													{
-														'field': 'assunto',
-														'label': 'Assunto',
-														'filterValues': 'assunto',
-														'standard': true
-													}
-												]
-											}"
-										/>
-									</div>	
-								</div>	
-							</div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>	
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-								<div class="outroAssunto hide">
-									<label for="outroAssunto" class="control-label">Outro assunto<span class="required text-danger"><strong>*</strong></span></label>
-									<input type="text" class="form-control" name="outroAssunto" id="outroAssunto" style="text-transform: uppercase;" />
-								</div>	
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-8 col-lg-8">
-								<label for="descSolic" class="control-label">Descri&ccedil;&atilde;o da solicita&ccedil;&atilde;o<span class="required text-danger"><strong>*</strong></span></label>
-								<div class="descSolic">
-									<textarea rows="4" class="form-control" name="descSolic" id="descSolic" ></textarea>
-								</div>	
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-8 col-lg-8">
-								<div class="anotJuridico hide">
-									<label for="anotJuridico" class="control-label">Anota&ccedil;&otilde;es - Dep. Jur&iacute;dico (visualiza&ccedil;&atilde;o restrita ao Jurídico)</label>
-									<textarea rows="4" class="form-control" name="anotJuridico" id="anotJuridico" placeholder="Visualiza&ccedil;&atilde;o restrita ao Jur&iacute;dico"></textarea>
-								</div>	
-							</div>
-						</div>
-
-						
-					</div>
-
-					<div class="form-group">
-						
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-3 col-lg-3">
-								<div class="saldoHoras hide">
-									<label for="saldoHoras" class="control-label">Prazo para conclusão</label>
-									<input type="text" name="prazoFluig" id="prazoFluig" class="form-control" readonly>
-								</div>	
-								<input type="text" name="saldoHoras" id="saldoHoras" class="form-control hide" readonly>
-								<input type="text" name="horaAtual" id="horaAtual" class="form-control hide" readonly>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="form-group">
-						
-						<div class="label-field">
-							<div class="col-md-1 col-lg-1"></div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-3 col-lg-3">
-								<div class="prazoRevisao hide">
-									<label for="prazoRevisao" class="control-label">Prazo para solicitante revisar</label>
-									<input type="text" name="prazoRevisao" id="prazoRevisao" class="form-control" onblur="blurFunction()">
-								</div>	
-							</div>
-						</div>
-
-						<div class="label-field">
-							<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
-								<label class="control-label alert alert-danger hide" pull-left style="margin-top: 4%;"><strong>Aten&ccedil;&atilde;o</strong>: o tempo disponibilizado para a revis&atilde;o é maior que o prazo para conclus&atilde;o da solicita&ccedil;&atilde;o</label>
-							</div>
-						</div>
-
-					</div>
-
-					<br />
-					<legend></legend>
-
-					<div class="form-group">
-            			<div class="col-md-12">
-              				<button type="button" class="btn btn-primary" id="btnObs" onclick="respbtn()">Nova observa&ccedil;&atilde;o</button>
-              				<input type="text" name="indextab" id="indextab" class="indextab hide">
-			            </div>
-			        </div>
-
-					<div class="form-group tabObs">
-	
-				    	<table class="table table-striped" id="tabObs" custonFnDelete="fnCustomDelete(this)" tablename="tabObs" noaddbutton="true" nodeletebutton="true" style="width: 100%;">
-				        	<thead>
-				        		<tr>
-				        			<th class="col-sm-1"></th>
-				        			<th class="col-sm-5">Observação</th>
-				        			<th class="col-sm-3">Autor</th>
-				        			<th class="col-sm-4">Data</th>
-				        		</tr>
-				        	</thead>
-				        	<tbody>
-				        		<tr class="concat" id="concatAdd">
-					                <td class="col-sm-1">
-					                	
-					                </td>
-					                <td class="col-sm-5">				 
-					                	<div class="tab_obs">
-							               	<textarea rows="4" name="tab_obs" id="tab_obs" class="form-control" ></textarea>
-						                </div>	
-	                				</td>
-	                				<td class="col-sm-3">
-					                	<div class="tab_autor">
-					                		<input type="text" name="tab_autor" id="tab_autor" class="form-control"  readonly>
-					                	</div>
-	               					</td>	
-					                <td class="col-sm-2">
-					                	<div class="tab_data">
-					                		<input type="text" name="tab_data" id="tab_data" class="form-control"  style="width: 60%;" readonly>
-					                	</div>
-	               					</td>	
-				        		</tr>	
-				        	</tbody>
-				        </table> <!-- Fim da Table tabJustificativa -->	
-				    </div>
-				</div>	<!-- Fim da div bs-box-tabs -->
-			</div> <!-- Fim da div tab-content -->
+				<input type="text" name="codSolicitante" id="codSolicitante" class="hide" />
+				<input type="text" name="atividadeCorrente" id="atividadeCorrente" class="hide" />
+				<input type="text" name="userAtivo" id="userAtivo" class="hide" />
+				<input type="text" name="userAtivoExecTarefa" id="userAtivoExecTarefa" class="hide" />
+				<input type="text" name="ident" id="ident" class="hide" />
+				<input type='text' name='arrayApoio' id='arrayApoio' class='hide' />
+				<input type="text" name="codGrupo" id="codGrupo" class="hide" readonly />
+				<input type="text" name="emailSolicitante" id="emailSolicitante" class="hide" readonly />
+				<input type="text" name="ramal" id="ramal" class="hide" readonly />
+				<input type="text" name="folder" id="folder" class="hide" readonly />
+				<input type="text" name="showTipo" id="showTipo" class="hide"/>
+				<input type="text" name="showModal" id="showModal" class="hide" value='0' />				
+				<input type="text" name="prazoDeterminado2" id="prazoDeterminado2" class="hide" value='0' />	
 				
-		</form>
-	</div> <!-- Fim da div container -->
-</div>
+				
+				<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4 hide">
+					<label for="prioridade" class="control-label">Prioridade<span class="required text-danger"><strong>*</strong></span></label>
+					<div class="prioridade">
+						<input type="text" name="prioridade2" id="prioridade2" class="form-control hide" readonly />
+						<select name="prioridade" id="prioridade" class="form-control">
+							<option value="0">-</option>
+							<option value="4">Normal</option>
+							<option value="3">Urgente</option>
+							<option value="2">Importante</option>
+							<option value="1">Importante e urgente</option>
+						</select>
+					</div>
+				</div>
+
+
+				
+				<!-- Inicio panel Dados da solicitação -->
+				<div class='row'>
+					<div class='col-md-12 col-lg-12 col-sm-12 col-xs-12'>
+						<div class='panel panel-primary'>
+							<div class='panel-heading'>
+								<legend class='panel-title'><a class='collapse-icon up' data-toggle='collapse' id='linkCollapseDadosSolic' href='#collapseDadosSolic' style='text-decoration: none !important'>Dados da solicitação</a></legend>
+							</div>
+							<div id='collapseDadosSolic' class='panel-collapse collapse in'>
+								<div class='panel-body'>
+
+									<div class="row form-input">
+										
+										<div class="label-field">
+											<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+												<label for="dataSolic" class="control-label">Data da solicita&ccedil;&atilde;o</label>
+												<input type="text" name="dataSolic" id="dataSolic" class="form-control" readonly />
+											</div>
+										</div>
+
+										<div class="label-field">
+											<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+												<label for="depart" class="control-label">Departamento</label>
+												<input type="text" name="depart" id="depart" class="form-control" readonly />
+											</div>
+										</div>
+										
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+												<label for="solicitante" class="control-label">Solicitante</label>
+												<input type="text" name="solicitante" id="solicitante" class="form-control" readonly />
+											</div>
+										</div>
+
+									</div>
+
+									<div class="row form-input">
+
+										<div class="label-field">
+											<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+												<div class="">
+													<label for="tipoPrazo" class="control-label rdTipoPrazo">Tipo de prazo</label>
+													<div class="radio tipoPrazo">
+														<label class="rdTipoPrazo "><input type="radio" name="rdTipoPrazo" id="rdTipoPrazo" value="Normal"><strong>3 - Normal - 10 dias &uacute;teis para executar</strong></label><br/>
+														<label class="rdTipoPrazo tipoPrazoMargin " ><input type="radio" name="rdTipoPrazo" id="rdTipoPrazo" value="Importante"><strong>2 - Importante - 5 dias &uacute;teis para executar</strong></label><br />
+														<label class="rdTipoPrazo tipoPrazoMargin " ><input type="radio" name="rdTipoPrazo" id="rdTipoPrazo" value="Urgente"><strong>1 - Urgente - 3 dias &uacute;teis para executar</strong></label><br />
+														<label class="rdTipoPrazo tipoPrazoMargin"><input type="radio" name="rdTipoPrazo" id="rdTipoPrazo" value="Determinado"><strong>Prazo determinado</strong></label>
+														<div class="prazoDeterminado " style="display: none; float: right;">
+															<input type="text" name="prazoDeterminado" id="prazoDeterminado" class="form-control prazoDeterminado "  placeholder="Insira prazo" mask="00/00/0000" />
+														</div>
+													</div>
+													<input type="text" name="tipoPrazoValid" id="tipoPrazoValid" class="hide">
+												</div>
+											</div>
+										</div>
+
+										<div class="label-field rdSolicOriginal">
+											<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6 ">
+												<label for="solicOriginal" class="control-label ">Quem &eacute; o solicitante origin&aacute;rio?</label>
+												<div class="radio solicOriginal">
+													<label class="rdSolicOriginal "><input type="radio" name="rdSolicOriginal" id="rdSolicOriginal"
+															value="userSolic"><strong>Usu&aacute;rio
+															solicitante</strong></label>
+													<br />
+													<br />
+													<label class="rdSolicOriginal "><input type="radio" name="rdSolicOriginal" id="rdSolicOriginal"
+															value="outro"><strong>Outro</strong></label>
+													<div class="userOutro" style="display: none;">
+														<input type="text" name="userOutro" id="userOutro" class="form-control  " placeholder="Nome do solicitante origin&aacute;rio" style="float: right;" />
+													</div>
+													<!-- <div class="userOutroJur" style="display: none;">
+														<input type='zoom' dataset="BPM-005-GrupoJuridico" class='form-control' name='userOutroJur' id='userOutroJur' data-zoom="{  
+															'displayKey': 'nome',  
+															'datasetId': 'BPM-005-GrupoJuridico',
+															'maximumSelectionLength':'1',	 
+															'fields': [  
+																{  
+																	'field': 'nome',  
+																	'label': 'Usuário',  
+																	'filterValues': 'nome',  
+																	'standard': 'true' 
+																}  
+															]  
+														}" />
+													</div> -->
+												</div>
+												<input type="text" name="solicOriginalValid" id="solicOriginalValid" class="hide">
+											</div>
+										</div>
+
+										
+									</div>
+
+									<div class='col-md-12 col-lg-12 col-xs-11 col-sm-11 justMotiv' style="display: none;">
+										<div class='form-field'>
+											<div class='form-input'>
+												<div class='form-group justMotiv'>
+													<label>Justificar motivo da urgência<span class='required text-danger '><strong>*</strong></span></label>
+													<textarea rows='3' name='justMotiv' id='justMotiv' class='form-control' ></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row form-input alerta1" style="display: none;">
+										<div class="label-field">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<div class="alert alert-warning">
+													<strong>Alerta!</strong> O prazo selecionado iniciará sua contagem após a análise da solicitação.
+												</div>
+											</div>
+										</div>		
+									</div>
+
+									<div class="row form-input">
+										<div class="label-field">
+											<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+												<label for="empresa" class="control-label empresa empresa2">Empresa<span class="required text-danger"><strong>*</strong></span></label>
+												<input type="text" class="form-control hide" name="empresa2" id="empresa2" readonly />
+												<div class="empresaZoom">
+													<input type="zoom" dataset="BPM-005-BD-MEGA-ViewEmpresa" class="form-control" name="empresa" id="empresa"
+														data-zoom="{
+														'displayKey': 'ORG_ST_NOME',
+														'datasetId': 'BPM-005-BD-MEGA-ViewEmpresa',
+														'maximumSelectionLength':'1',
+														'fields': [
+															{
+																'field': 'ORG_ST_NOME',
+																'label': 'Empresa',
+																'filterValues': 'ORG_ST_NOME',
+																'standard': 'true'
+															}	
+														]	
+													}" />
+												</div>
+											</div>
+										</div>
+
+										
+
+										<div class="label-field">
+											<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+												<label for="outraParte" class="control-label outraParte">Outra parte<span
+														class="required text-danger"><strong>*</strong></span></label>
+												<div class="outraParte">
+													<input type="text" class="form-control" name="outraParte" id="outraParte" style="text-transform: uppercase;"
+														placeholder="Exemplos: clientes, fornecedor" />
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row form-input outraEmpresa" style="display: none;">
+										<div class="label-field">
+											<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6  " >
+												<label for="outraEmpresa" class="control-label">Outra empresa<span class="required text-danger"><strong>*</strong></span></label>
+												<input type="text" class="form-control" name="outraEmpresa" id="outraEmpresa" />
+											</div>
+										</div>
+									</div>
+
+									<div class="row form-input ">
+										
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<label for="categoria" class="control-label categoria">Categoria<span
+														class="required text-danger"><strong>*</strong></span></label>
+												<input type="text" class="form-control hide" name="categoria2" id="categoria2" readonly />
+												<div class="categoriaZoom">
+													<input type="zoom" class="form-control" name="categoria" id="categoria" data-zoom="{
+														'displayKey': 'categoria',
+														'datasetId': 'BPM-005-Categoria',
+														'fields': [
+															{
+																'field': 'categoria',
+																'label': 'Categoria',
+																
+																'standard': 'true'
+															}	
+														]	
+													}" />
+												</div>
+											</div>
+										</div>
+
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<div class="assunto2 " style="display: none;">
+													<label for="assunto" class="control-label assunto">Assunto<span class="required text-danger"><strong>*</strong></span></label>
+													<input type="text" class="form-control hide" name="assunto3" id="assunto3" readonly />
+													<div class="assuntoZoom">
+														<input type="zoom" class="form-control" name="assunto" id="assunto" data-zoom="{
+															'displayKey': 'assunto',
+															'datasetId': 'BPM-005-Assunto',
+															'fields': [
+																{
+																	'field': 'assunto',
+																	'label': 'Assunto',
+																	'standard': true
+																}
+															]
+														}" />
+													</div>
+												</div>
+											</div>
+										</div>	
+										
+									</div>
+
+									
+									<div class="row form-input tipo" style="display: none;">
+
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+										</div>
+
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+												<div class=" tipo ">
+													<label for="tipo" class="control-label">Tipo<span class="required text-danger"><strong>*</strong></span></label>
+													<div class="tipo">
+														
+														<input type="zoom" class="form-control" name="tipo" id="tipo" data-zoom="{
+															'displayKey': 'tipo',
+															'datasetId': 'BPM-005-Tipo',
+															'fields': [
+																{
+																	'field': 'tipo',
+																	'label': 'Tipo',
+																	'standard': true
+																}
+															]
+														}" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row form-input">
+
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+												<div class=" outraCategoria " style="display: none;">
+													<label for="outraCategoria" class="control-label">Outra categoria<span
+															class="required text-danger"><strong>*</strong></span></label>
+													<div class="outraCategoria">
+														<input type="text" class="form-control" name="outraCategoria" id="outraCategoria"
+															style="text-transform: uppercase;" />
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="label-field">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<div class="outroAssunto " style="display: none;">
+													<label for="outroAssunto" class="control-label">Outro assunto<span
+															class="required text-danger"><strong>*</strong></span></label>
+													<input type="text" class="form-control" name="outroAssunto" id="outroAssunto"
+														style="text-transform: uppercase;" />
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="row form-input">
+
+										<div class="label-field descSolic">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="descSolic" class="control-label ">Descri&ccedil;&atilde;o da solicita&ccedil;&atilde;o<span
+														class="required text-danger"><strong>*</strong></span></label>
+												<div class="descSolic">
+													<textarea rows="5" class="form-control" name="descSolic" id="descSolic" placeholder="Descrever claramente a solicitação, especificando e detalhando a sua necessidade. Inclusive pode-se anexar arquivos."></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div> <!-- Fim do panel Dados da solicitação -->				
+				
+				<!-- Início panel Analisar solicitação -->
+				<div class='row panelAnalisarSolic' style="display: none;">
+					<div class='col-md-12'>
+						<div class='panel panel-primary'>
+							<div class='panel-heading'>
+								<legend class='panel-title'><a class='collapse-icon up' data-toggle='collapse' id='linkCollapseAnalisarSolic' href='#collapseAnalisarSolic' style='text-decoration: none !important'>Analisar solicitação</a></legend>
+							</div>
+							<div id='collapseAnalisarSolic' class='panel-collapse collapse in'>
+								<div class='panel-body'>
+				 
+									<div class="row form-input">
+										<div class="label-field">
+											<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+												<div class="">
+													<label for="rdAnaliseSolic" class="control-label rdAnaliseSolic">Analisar e encaminhar solicita&ccedil;&atilde;o para:<span class='required text-danger'><strong>*</strong></span></label>
+													<div class="radio rdAnaliseSolic">
+														<label class="rdAnaliseSolic "><input type="radio" name="rdAnaliseSolic" id="rdAnaliseSolic" value="executar"><strong>Executar tarefa</strong></label><br/>
+														<label class="rdAnaliseSolic tipoPrazoMargin " ><input type="radio" name="rdAnaliseSolic" id="rdAnaliseSolic" value="esclarecer"><strong>Esclarecer (retornar ao solicitante)</strong></label><br/>
+														<label class="rdAnaliseSolic tipoPrazoMargin " ><input type="radio" name="rdAnaliseSolic" id="rdAnaliseSolic" value="finalizar"><strong>Finalizar</strong></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row form-input descSolic2" style="display: none;">
+
+										<div class="label-field descSolic2">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="descSolic2" class="control-label ">Descri&ccedil;&atilde;o (executar tarefa)</label>
+												<div class="descSolic2">
+													<textarea rows="5" class="form-control" name="descSolic2" id="descSolic2" ></textarea>
+												</div>
+											</div>
+										</div>
+									</div>	
+				 
+									<div class="row form-input esclarecer" style="display: none;">
+
+										<div class="label-field ">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="esclarecer" class="control-label ">Descri&ccedil;&atilde;o (esclarecer solicita&ccedil;&atilde;o)<span class="required text-danger"><strong>*</strong></span></label>
+												<div class="esclarecer">
+													<textarea rows="5" class="form-control" name="esclarecer" id="esclarecer" ></textarea>
+												</div>
+											</div>
+										</div>
+									</div>	
+				 
+									<div class="row form-input textFinalizar" style="display: none;">
+
+										<div class="label-field ">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="textFinalizar" class="control-label ">Descri&ccedil;&atilde;o (finalizar)<span class="required text-danger"><strong>*</strong></span></label>
+												<div class="textFinalizar">
+													<textarea rows="5" class="form-control" name="textFinalizar" id="textFinalizar" ></textarea>
+												</div>
+											</div>
+										</div>
+									</div>	
+				 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- Fim do panel Analisar solicitação -->
+
+				<!-- Início panel Esclarecer solicitação -->
+				<div class='row panelEsclarecerSolic' style="display: none;">
+					<div class='col-md-12'>
+						<div class='panel panel-primary'>
+							<div class='panel-heading'>
+								<legend class='panel-title'><a class='collapse-icon up' data-toggle='collapse' id='linkCollapseEsclarecerSolic' href='#collapseEsclarecerSolic' style='text-decoration: none !important'>Esclarecer solicita&ccedil;&atilde;o</a></legend>
+							</div>
+							<div id='collapseEsclarecerSolic' class='panel-collapse collapse in'>
+								<div class='panel-body'>
+				 
+									<div class="label-field esclarecerSolic">
+										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+											<label for="esclarecerSolic" class="control-label ">Esclarecer solicita&ccedil;&atilde;o<span
+													class="required text-danger"><strong>*</strong></span></label>
+											<div class="esclarecerSolic">
+												<textarea rows="5" class="form-control" name="esclarecerSolic" id="esclarecerSolic" placeholder=""></textarea>
+											</div>
+										</div>
+									</div>
+				 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- Fim do panel Esclarecer solicitação -->
+
+				<!-- Inicio da panel Executar tarefa -->
+				<div class='row panelExecutarTarefa' style="display: none;">
+					<div class='col-md-12'>
+						<div class='panel panel-primary'>
+							<div class='panel-heading'>
+								<legend class='panel-title'><a class='collapse-icon up' data-toggle='collapse' id='linkCollapseExecutarTarefa' href='#collapseExecutarTarefa' style='text-decoration: none !important'>Executar tarefa</a></legend>
+							</div>
+							<div id='collapseExecutarTarefa' class='panel-collapse collapse in'>
+								<div class='panel-body'>
+				 
+									<div class="">
+										<label for='rdEncaminharSolic' class='label-control rdEncaminharSolic'>Executar tarefa e encaminhar para:<span class='required text-danger'><strong>*</strong></span></label>
+										<div class="radio">
+											<label class="rdEncaminharSolic "><input type="radio" name="rdEncaminharSolic" id="rdEncaminharSolic" value="finalizar"><strong>Finalizar (enviar parecer final ao solicitante)</strong></label>
+											<br />
+											<div class="row form-input justFinalizar" style="display: none;">
+
+												<div class="label-field justFinalizar">
+													<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+														<label for="justFinalizar" class="control-label ">Descri&ccedil;&atilde;o (finalizar)<span class="required text-danger"><strong>*</strong></span></label>
+														<div class="justFinalizar">
+															<textarea rows="5" class="form-control" name="justFinalizar" id="justFinalizar" ></textarea>
+														</div>
+													</div>
+												</div>
+												<br />
+											</div>	
+											<label class="rdEncaminharSolic "><input type="radio" name="rdEncaminharSolic" id="rdEncaminharSolic" value="revisao"><strong>Revisar</strong></label>
+											<br />
+											<div class="row form-input motivoRevisao" style="display: none;">
+
+												<div class="label-field motivoRevisao">
+													<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+														<label for="motivoRevisao" class="control-label ">Descri&ccedil;&atilde;o (revisar)<span class="required text-danger"><strong>*</strong></span></label>
+														<div class="motivoRevisao">
+															<textarea rows="5" class="form-control" name="motivoRevisao" id="motivoRevisao" ></textarea>
+														</div>
+													</div>
+												</div>
+												<br />
+											</div>												
+											<label class="rdEncaminharSolic "><input type="radio" name="rdEncaminharSolic" id="rdEncaminharSolic" value="transferir"><strong>Transferir</strong></label>
+											<br />
+											
+											<div class="row form-input zoomUsuario" style="display: none;">
+
+												<div class="label-field zoomUsuario">
+													<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+														<div class="zoomUsuario" style="margin-top: 1%;">
+															<label for='apoio' class='label-control'>Transferir</label>
+															<input type='zoom' dataset="BPM-005-GrupoJuridico" class='form-control' name='apoio' id='apoio' data-zoom="{  
+																	'displayKey': 'nome',  
+																	'datasetId': 'BPM-005-GrupoJuridico',
+																	'maximumSelectionLength':'1',	 
+																	'fields': [  
+																		{  
+																			'field': 'nome',  
+																			'label': 'Usuário',  
+																			'filterValues': 'nome',  
+																			'standard': 'true' 
+																		}  
+																	]  
+																}" />
+															<input type='text' name='codApoio' id='codApoio' class='form-control hide' />
+														</div>
+													</div>
+												</div>
+												<br />
+											</div>	
+											<label class="rdEncaminharSolic "><input type="radio" name="rdEncaminharSolic" id="rdEncaminharSolic" value="apoio"><strong>Apoio</strong></label>
+										</div>
+										<div class="label-field zoomApoio " style="display: none;">
+											<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+												<div class="zoomApoio" style="margin-top: 1%;">
+													<label for='apoio' class='label-control'>Apoio de:</label>
+													<input type='zoom' class='form-control' name='apoio2' id='apoio2' data-zoom="{  
+															'displayKey': 'nome',  
+															'datasetId': 'BPM-005-GrupoJuridico',	 
+															'fields': [  
+																{  
+																	'field': 'nome',  
+																	'label': 'Usuário',  
+																	'filterValues': 'nome',  
+																	'standard': 'true' 
+																}  
+															]  
+														}" />
+													<input type='text' name='codApoio2' id='codApoio2' class='form-control hide' />
+												</div>
+											</div>
+										</div>	
+
+										<div class="label-field justApoio zoomApoio" style="display: none;"foda >
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="justApoio" class="control-label ">Descri&ccedil;&atilde;o (apoio)<span class="required text-danger"><strong>*</strong></span></label>
+												<div class="justApoio">
+													<textarea rows="5" class="form-control" name="justApoio" id="justApoio" ></textarea>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+				 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- Fim do panel Executar tarefa -->
+
+				<!-- Inicio da panel Revisar -->
+				<div class='row panelRevisar' style="display: none;">
+					<div class='col-md-12'>
+						<div class='panel panel-primary'>
+							<div class='panel-heading'>
+								<legend class='panel-title'><a class='collapse-icon up' data-toggle='collapse' id='linkCollapseRevisar' href='#collapseRevisar' style='text-decoration: none !important'>Revisar</a></legend>
+							</div>
+							<div id='collapseRevisar' class='panel-collapse collapse in'>
+								<div class='panel-body'>
+				 
+									<div class="row form-input rdNecAjuste" >
+										<div class="label-field">
+											<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+												<div class="rdNecAjuste ">
+													<label for="rdNecAjuste" class="control-label">Necessita de ajustes?<span class="required text-danger"><strong>*</strong></span></label>
+													<div class="radio">
+														<label class="rdNecAjuste "><input type="radio" name="rdNecAjuste" id="rdNecAjuste" value="nao"><strong>Finalizar</strong></label>
+														<br />
+														<br />
+														<label class="rdNecAjuste "><input type="radio" name="rdNecAjuste" id="rdNecAjuste" value="sim"><strong>Ajustar</strong>
+															(retornar ao Jur&iacute;dico)</label>
+													</div>
+													<input type="text" name="necAjusteValid" id="necAjusteValid" class=" hide">
+												</div>
+			
+												
+											</div>
+										</div>
+									</div>		
+
+									<div class="row form-input necAjuste" style="display: none;">
+
+										<div class="label-field" >
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="necAjuste" class="control-label ">Descri&ccedil;&atilde;o (ajustar)<span class="required text-danger"><strong>*</strong></span></label>
+												<div class="necAjuste">
+													<textarea rows="5" class="form-control" name="necAjuste" id="necAjuste" placeholder="Descrever claramente os ajustes necessários. Se necessário, pode-se anexar arquivos.
+
+ATENÇÃO: ao retornar a solicitação para realizar os ajustes, o Dep. Jurídico empresarial contará com o prazo de 2 (dois) dias úteis para executar tarefa."></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								
+								
+								
+							</div>
+						</div>
+					</div>
+				</div> <!-- Fim do panel Revisar -->
+				
+
+				<!-- HISTORICO -->
+				<div id="div-obs">
+					<div class="row" id="div-obsHistorico">
+						<div class="col-md-12 col-lg-12">
+							<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="obsHistorico">
+								<legend>Observa&ccedil;&otilde;es</legend>
+								<div class="form-input">
+									<div class="form-group">
+										<label style="display: none;">Observa&ccedil;&otilde;es</label>
+										<textarea name="obsHistorico" id="obsHistorico" class="form-control expand" rows="3"
+											data-size="big" placeholder="Descrever observa&ccedil;&otilde;es"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>&Uacute;ltima atualiza&ccedil;&atilde;o</legend>
+							<textarea name="ultimaAtualizacao" id="ultimaAtualizacao" class="fs-display-none" cols="30"
+								rows="10"></textarea>
+							<div id="dv_ultimaAtualizacao"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend></legend>
+							<textarea name="historico" id="historico" class="fs-display-none" cols="30" rows="10"></textarea>
+							<div id="dv_historico"></div>
+						</div>
+					</div>
+					<div class="row" id="btn_view">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<button class="btn btn-primary" id="btn-historico" type="button">Ver mais</button>
+						</div>
+					</div>
+				</div>
+				<!-- FIM HISTORICO -->
+				<br>
+
+			</form>
+		<!-- </div>  Fim da div container --> 
+	</div>
+
+	<script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/formValidate.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/view.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/blockFields.js" charset="utf-8"></script>
+
 
 </body>
+
 </html>

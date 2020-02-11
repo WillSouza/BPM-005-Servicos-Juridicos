@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="author">William Souza</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.7.0.v201706222054</property>
+    <text-property name="title">BPM-005 - Dashboard de serviços jurídicos em aberto</text-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">fixed layout</property>
@@ -93,8 +95,8 @@ date;</value>
                 </ex-property>
             </list-property>
             <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
-            <property name="odaURL">jdbc:oracle:thin:@172.22.10.10:1521:fluigdev</property>
-            <property name="odaUser">fluigdev</property>
+            <property name="odaURL">jdbc:oracle:thin:@172.22.10.89:1521:fluig</property>
+            <property name="odaUser">fluigprd</property>
             <encrypted-property name="odaPassword" encryptionID="base64">ZXp0ZWNhdmVsb3I=</encrypted-property>
         </oda-data-source>
     </data-sources>
@@ -124,8 +126,11 @@ date;</value>
                 <structure>
                     <property name="name">categoria</property>
                     <property name="paramName">Categoria</property>
+                    <property name="nativeName"></property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">0</property>
                     <property name="position">1</property>
+                    <property name="isOptional">false</property>
                     <property name="isInput">true</property>
                     <property name="isOutput">false</property>
                 </structure>
@@ -267,7 +272,7 @@ date;</value>
         AND pw.num_seq_anexo_princ = a.num_seq_anexo
         AND pw.log_ativ = 1
        
-       JOIN V_BPM_000_Jurídico v
+       JOIN V_BPM_005_JURIDICO v
          ON v.documentid =a.nr_documento
         AND v.version = a.nr_versao
        
@@ -396,50 +401,60 @@ date;</value>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">ID</property>
+                    <property name="analysis">measure</property>
                     <text-property name="displayName">ID</text-property>
                     <text-property name="heading">ID</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">COMPANYID</property>
+                    <property name="analysis">measure</property>
                     <text-property name="displayName">COMPANYID</text-property>
                     <text-property name="heading">COMPANYID</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">CARDID</property>
+                    <property name="analysis">measure</property>
                     <text-property name="displayName">CARDID</text-property>
                     <text-property name="heading">CARDID</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">DOCUMENTID</property>
+                    <property name="analysis">measure</property>
                     <text-property name="displayName">DOCUMENTID</text-property>
                     <text-property name="heading">DOCUMENTID</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">VERSION</property>
+                    <property name="analysis">measure</property>
                     <text-property name="displayName">VERSION</text-property>
                     <text-property name="heading">VERSION</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">TABLEID</property>
+                    <property name="analysis">dimension</property>
                     <text-property name="displayName">TABLEID</text-property>
                     <text-property name="heading">TABLEID</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">CATEGORIA</property>
+                    <property name="analysis">dimension</property>
                     <text-property name="displayName">CATEGORIA</text-property>
                     <text-property name="heading">CATEGORIA</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">ATIVO</property>
+                    <property name="analysis">dimension</property>
                     <text-property name="displayName">ATIVO</text-property>
                     <text-property name="heading">ATIVO</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">SEQUENCIA</property>
+                    <property name="analysis">dimension</property>
                     <text-property name="displayName">SEQUENCIA</text-property>
                     <text-property name="heading">SEQUENCIA</text-property>
                 </structure>
             </list-property>
+            <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -555,8 +570,8 @@ date;</value>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[SELECT * FROM V_BPM000_JUR_CATEGORIA v WHERE ativo = 'on' AND sequencia IS NOT NULL AND 
-         version = (SELECT MAX(version) FROM V_BPM000_JUR_CATEGORIA z WHERE  z.DOcumentId = v.DOCUMENTID)  ORDER BY TO_NUMBER(sequencia) ASC ]]></xml-property>
+            <xml-property name="queryText"><![CDATA[SELECT * FROM V_BPM005_JUR_CATEGORIA v WHERE ativo = 'on' AND sequencia IS NOT NULL AND 
+         version = (SELECT MAX(version) FROM V_BPM005_JUR_CATEGORIA z WHERE  z.DOcumentId = v.DOCUMENTID)  ORDER BY TO_NUMBER(sequencia) ASC ]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>

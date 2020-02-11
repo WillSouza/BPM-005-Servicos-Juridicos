@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_241" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>volume</string>
+   <array class="java.lang.String" length="1">
+    <void index="0">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 1550</string>
+   <array class="java.lang.String" length="190">
+    <void index="0">
+     <string>kmPercorrido</string>
+    </void>
+    <void index="1">
+     <string>indexTabCombustivel</string>
+    </void>
+    <void index="2">
+     <string>codEmpresaSolicitante</string>
+    </void>
+    <void index="3">
+     <string>outraDespesaSubTotal</string>
+    </void>
+    <void index="4">
+     <string>empresaSolicitante</string>
+    </void>
+    <void index="5">
+     <string>ancCombustEndereco3</string>
+    </void>
+    <void index="6">
+     <string>ancCombustEndereco1</string>
+    </void>
+    <void index="7">
+     <string>justReprovReembolso</string>
+    </void>
+    <void index="8">
+     <string>ancTotalRefeicao</string>
+    </void>
+    <void index="9">
+     <string>ancDataSolic</string>
+    </void>
+    <void index="10">
+     <string>ancRdVerificDocs</string>
+    </void>
+    <void index="11">
+     <string>verificDocs</string>
+    </void>
+    <void index="12">
+     <string>indexTabOutraDespesa</string>
+    </void>
+    <void index="13">
+     <string>dataDespesaRefeicao</string>
+    </void>
+    <void index="14">
+     <string>kmVolta</string>
+    </void>
+    <void index="15">
+     <string>ancPedagioSubTotal</string>
+    </void>
+    <void index="16">
+     <string>tipoUsuario</string>
+    </void>
+    <void index="17">
+     <string>motivoRefeicao</string>
+    </void>
+    <void index="18">
+     <string>formaPagamentoPedagio</string>
+    </void>
+    <void index="19">
+     <string>protocolRecebimento</string>
+    </void>
+    <void index="20">
+     <string>dataPgtoReembolso</string>
+    </void>
+    <void index="21">
+     <string>ancDataPgtoReembolso</string>
+    </void>
+    <void index="22">
+     <string>pedagioSubTotal</string>
+    </void>
+    <void index="23">
+     <string>protocolRecebimento2</string>
+    </void>
+    <void index="24">
+     <string>ancKmPercorrido</string>
+    </void>
+    <void index="25">
+     <string>ancDescOutraDespesa</string>
+    </void>
+    <void index="26">
+     <string>refeicaoExtra</string>
+    </void>
+    <void index="27">
+     <string>ancTotalOutraDespesa</string>
+    </void>
+    <void index="28">
+     <string>indexTabRefeicao</string>
+    </void>
+    <void index="29">
+     <string>ancGestor</string>
+    </void>
+    <void index="30">
+     <string>obsHistorico</string>
+    </void>
+    <void index="31">
+     <string>aprovadorInicial</string>
+    </void>
+    <void index="32">
+     <string>rdAnalisarPreAprov</string>
+    </void>
+    <void index="33">
+     <string>ancLocalDestinoPedagio</string>
+    </void>
+    <void index="34">
+     <string>ancDescPedagio</string>
+    </void>
+    <void index="35">
+     <string>ancCNPJ</string>
+    </void>
+    <void index="36">
+     <string>ancCentroCusto</string>
+    </void>
+    <void index="37">
+     <string>ancLocalPartidaPedagio</string>
+    </void>
+    <void index="38">
+     <string>aprovadorFinal</string>
+    </void>
+    <void index="39">
+     <string>ancNumAP2</string>
+    </void>
+    <void index="40">
+     <string>totalOutraDespesa</string>
+    </void>
+    <void index="41">
+     <string>atividadeCorrente</string>
+    </void>
+    <void index="42">
+     <string>outroSolicitante</string>
+    </void>
+    <void index="43">
+     <string>novaDataPgto</string>
+    </void>
+    <void index="44">
+     <string>estacionamentolSubTotal</string>
+    </void>
+    <void index="45">
+     <string>cpf</string>
+    </void>
+    <void index="46">
+     <string>descReembolso</string>
+    </void>
+    <void index="47">
+     <string>lbCidadeRefeicao</string>
+    </void>
+    <void index="48">
+     <string>ancTempPermEstac</string>
+    </void>
+    <void index="49">
+     <string>agenciaHide</string>
+    </void>
+    <void index="50">
+     <string>codCentroCusto</string>
+    </void>
+    <void index="51">
+     <string>codSolicitante</string>
+    </void>
+    <void index="52">
+     <string>dataAprovFinal</string>
+    </void>
+    <void index="53">
+     <string>ancReembolsoRecebido</string>
+    </void>
+    <void index="54">
+     <string>cnpjHide2</string>
+    </void>
+    <void index="55">
+     <string>comprovanteProprioNome</string>
+    </void>
+    <void index="56">
+     <string>ancPlacaVeiculo</string>
+    </void>
+    <void index="57">
+     <string>totalPedagio</string>
+    </void>
+    <void index="58">
+     <string>codOutroSolicitante</string>
+    </void>
+    <void index="59">
+     <string>ancKmIda</string>
+    </void>
+    <void index="60">
+     <string>outraDespesa</string>
+    </void>
+    <void index="61">
+     <string>WKNumProces</string>
+    </void>
+    <void index="62">
+     <string>ancJustificarOcorrencia</string>
+    </void>
+    <void index="63">
+     <string>ancDataDespesaCombustivel</string>
+    </void>
+    <void index="64">
+     <string>ancCombustivelSubTotal</string>
+    </void>
+    <void index="65">
+     <string>ancCpfOutroSolicitante</string>
+    </void>
+    <void index="66">
+     <string>ancDescCombustivel</string>
+    </void>
+    <void index="67">
+     <string>dataOutraDespesa</string>
+    </void>
+    <void index="68">
+     <string>userAtivo</string>
+    </void>
+    <void index="69">
+     <string>ancValorNotaRefeicao</string>
+    </void>
+    <void index="70">
+     <string>rdAprovReembolso</string>
+    </void>
+    <void index="71">
+     <string>codEmpresa</string>
+    </void>
+    <void index="72">
+     <string>ancDataDespesaRefeicao</string>
+    </void>
+    <void index="73">
+     <string>dataDespesaCombustivel</string>
+    </void>
+    <void index="74">
+     <string>descEstacionamento</string>
+    </void>
+    <void index="75">
+     <string>ancRefeicaoSubTotal</string>
+    </void>
+    <void index="76">
+     <string>ancBotoes</string>
+    </void>
+    <void index="77">
+     <string>ancRdAnalisarPreAprov</string>
+    </void>
+    <void index="78">
+     <string>ancTipoDespesa</string>
+    </void>
+    <void index="79">
+     <string>cnpjSolicitante</string>
+    </void>
+    <void index="80">
+     <string>banco</string>
+    </void>
+    <void index="81">
+     <string>ancOutraDespesa</string>
+    </void>
+    <void index="82">
+     <string>ancDescRefeicao</string>
+    </void>
+    <void index="83">
+     <string>combustivelSubTotal</string>
+    </void>
+    <void index="84">
+     <string>ancValorNotaCombustivel</string>
+    </void>
+    <void index="85">
+     <string>cpfhide</string>
+    </void>
+    <void index="86">
+     <string>ancEstacionamentolSubTotal</string>
+    </void>
+    <void index="87">
+     <string>ancComprovanteProprioNome</string>
+    </void>
+    <void index="88">
+     <string>dataInicioEstacionamento</string>
+    </void>
+    <void index="89">
+     <string>refeicaoNacional</string>
+    </void>
+    <void index="90">
+     <string>valorKm</string>
+    </void>
+    <void index="91">
+     <string>dataTerminoEstacionamento</string>
+    </void>
+    <void index="92">
+     <string>ancDataPrevistaPgto</string>
+    </void>
+    <void index="93">
+     <string>ancCnpjSolicitante</string>
+    </void>
+    <void index="94">
+     <string>ancNumAP</string>
+    </void>
+    <void index="95">
+     <string>cidadeRefeicao</string>
+    </void>
+    <void index="96">
+     <string>cpfOutroSolicitante</string>
+    </void>
+    <void index="97">
+     <string>empresa</string>
+    </void>
+    <void index="98">
+     <string>totalReembolsoCombustivel</string>
+    </void>
+    <void index="99">
+     <string>ciente</string>
+    </void>
+    <void index="100">
+     <string>ancProjeto</string>
+    </void>
+    <void index="101">
+     <string>indexTabEstacionamento</string>
+    </void>
+    <void index="102">
+     <string>ancRdFormaAprov</string>
+    </void>
+    <void index="103">
+     <string>gestor</string>
+    </void>
+    <void index="104">
+     <string>diretor</string>
+    </void>
+    <void index="105">
+     <string>agendarEmpresa</string>
+    </void>
+    <void index="106">
+     <string>numAP2</string>
+    </void>
+    <void index="107">
+     <string>ancMotivoRefeicao</string>
+    </void>
+    <void index="108">
+     <string>ancRdAprovReembolso</string>
+    </void>
+    <void index="109">
+     <string>dataAprovInicial</string>
+    </void>
+    <void index="110">
+     <string>codDiretor</string>
+    </void>
+    <void index="111">
+     <string>ancJustificarVerificDocs</string>
+    </void>
+    <void index="112">
+     <string>dataDespesaPedagio</string>
+    </void>
+    <void index="113">
+     <string>cpfCnpjHide</string>
+    </void>
+    <void index="114">
+     <string>contaCorrente</string>
+    </void>
+    <void index="115">
+     <string>ancProtocolRecebimento</string>
+    </void>
+    <void index="116">
+     <string>indexModal</string>
+    </void>
+    <void index="117">
+     <string>ancSolicitante</string>
+    </void>
+    <void index="118">
+     <string>cnpjhide</string>
+    </void>
+    <void index="119">
+     <string>subTotalPedagio</string>
+    </void>
+    <void index="120">
+     <string>refeicaoSubTotal</string>
+    </void>
+    <void index="121">
+     <string>totalEstacionamento</string>
+    </void>
+    <void index="122">
+     <string>ancValorTotal</string>
+    </void>
+    <void index="123">
+     <string>subTotalBrindes</string>
+    </void>
+    <void index="124">
+     <string>localPartidaPedagio</string>
+    </void>
+    <void index="125">
+     <string>contaCorrenteHide</string>
+    </void>
+    <void index="126">
+     <string>ancEmpresa</string>
+    </void>
+    <void index="127">
+     <string>ancTotalEstacionamento</string>
+    </void>
+    <void index="128">
+     <string>localDestinoPedagio</string>
+    </void>
+    <void index="129">
+     <string>numAp</string>
+    </void>
+    <void index="130">
+     <string>ancOutraDespesaSubTotal</string>
+    </void>
+    <void index="131">
+     <string>combustEndereco1</string>
+    </void>
+    <void index="132">
+     <string>ancDataTerminoEstacionamento</string>
+    </void>
+    <void index="133">
+     <string>combustEndereco4</string>
+    </void>
+    <void index="134">
+     <string>departamento</string>
+    </void>
+    <void index="135">
+     <string>historico</string>
+    </void>
+    <void index="136">
+     <string>ancDepartamento</string>
+    </void>
+    <void index="137">
+     <string>combustEndereco2</string>
+    </void>
+    <void index="138">
+     <string>combustEndereco3</string>
+    </void>
+    <void index="139">
+     <string>dataPrevistaPgto</string>
+    </void>
+    <void index="140">
+     <string>ancAgencia</string>
+    </void>
+    <void index="141">
+     <string>ancQtdRefeicoes</string>
+    </void>
+    <void index="142">
+     <string>valorNotaRefeicao</string>
+    </void>
+    <void index="143">
+     <string>ancCpf</string>
+    </void>
+    <void index="144">
+     <string>ancContaCorrente</string>
+    </void>
+    <void index="145">
+     <string>subTotalCombustivel</string>
+    </void>
+    <void index="146">
+     <string>ancDataDespesaPedagio</string>
+    </void>
+    <void index="147">
+     <string>ancTotalReembolsoCombustivel</string>
+    </void>
+    <void index="148">
+     <string>ancDataOutraDespesa</string>
+    </void>
+    <void index="149">
+     <string>subTotalOutra</string>
+    </void>
+    <void index="150">
+     <string>projeto</string>
+    </void>
+    <void index="151">
+     <string>rdFormaAprov</string>
+    </void>
+    <void index="152">
+     <string>justReprovReembolso2</string>
+    </void>
+    <void index="153">
+     <string>dataSolic</string>
+    </void>
+    <void index="154">
+     <string>totalRefeicao</string>
+    </void>
+    <void index="155">
+     <string>ancCiente</string>
+    </void>
+    <void index="156">
+     <string>ancJustReprovReembolso2</string>
+    </void>
+    <void index="157">
+     <string>ancDescEstacionamento</string>
+    </void>
+    <void index="158">
+     <string>ancJustReprovReembolso</string>
+    </void>
+    <void index="159">
+     <string>ident</string>
+    </void>
+    <void index="160">
+     <string>qtdRefeicoes</string>
+    </void>
+    <void index="161">
+     <string>descPedagio</string>
+    </void>
+    <void index="162">
+     <string>ancAgendarEmpresa</string>
+    </void>
+    <void index="163">
+     <string>solicitante</string>
+    </void>
+    <void index="164">
+     <string>justificarVerificDocs</string>
+    </void>
+    <void index="165">
+     <string>reembolsoRecebido</string>
+    </void>
+    <void index="166">
+     <string>tempPermEstac</string>
+    </void>
+    <void index="167">
+     <string>ancDataInicioEstacionamento</string>
+    </void>
+    <void index="168">
+     <string>ultimaAtualizacao</string>
+    </void>
+    <void index="169">
+     <string>ancCidadeRefeicao</string>
+    </void>
+    <void index="170">
+     <string>agencia</string>
+    </void>
+    <void index="171">
+     <string>valorTotal</string>
+    </void>
+    <void index="172">
+     <string>subTotalRefeicao</string>
+    </void>
+    <void index="173">
+     <string>qtdAnexo</string>
+    </void>
+    <void index="174">
+     <string>cnpj</string>
+    </void>
+    <void index="175">
+     <string>descCombustivel</string>
+    </void>
+    <void index="176">
+     <string>kmIda</string>
+    </void>
+    <void index="177">
+     <string>ancValorKm</string>
+    </void>
+    <void index="178">
+     <string>descOutraDespesa</string>
+    </void>
+    <void index="179">
+     <string>ancNovaDataPgto</string>
+    </void>
+    <void index="180">
+     <string>placaVeiculo</string>
+    </void>
+    <void index="181">
+     <string>subTotalEstacionamento</string>
+    </void>
+    <void index="182">
+     <string>ancBanco</string>
+    </void>
+    <void index="183">
+     <string>ancDiretor</string>
+    </void>
+    <void index="184">
+     <string>indexTabPedagio</string>
+    </void>
+    <void index="185">
+     <string>ancKmVolta</string>
+    </void>
+    <void index="186">
+     <string>ancTotalPedagio</string>
+    </void>
+    <void index="187">
+     <string>justificarOcorrencia</string>
+    </void>
+    <void index="188">
+     <string>valorNotaCombustivel</string>
+    </void>
+    <void index="189">
+     <string>codGestor</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>mecanismoGrupo</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Jurídico global</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-Juridico</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>6 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_6</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>7 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_7</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>8 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_8</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>9 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_9</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>10 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_10</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>14 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_14</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>15 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_15</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>16 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_16</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>17 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_17</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>18 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_18</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>19 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_19</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-003 - Administrador - Gestão da qualidade</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-003-Adm-GestQual</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-006 - Obra e Projetos executivos</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-006_Proj</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-006 - Projetos executivos</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-006-Proj_Exec_</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-002 - Qualidade</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-002-Qualidade</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-002 - Administrador BPM</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-002-Adm</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-002 - Administrador - Gestão Qualidade</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-002-Adm-GestaoQualidade</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Administrador BPM-005</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-Adm</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>1 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_1</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>2 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_2</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>3 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_3</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>4 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_4</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>5 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_5</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>11 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_11</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>12 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_12</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>13 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_13</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>20 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_20</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>21 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_21</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>22 do Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-005-JURI_grupo_22</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-007 - Infraestrutura</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-007-TI_INFRA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-007 - Sistema</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-007-TI_SISTEMA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-003 - Solicitante</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-003-Solic</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Engenheiros PDC</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-006-Eng-PDC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-004 - Contrato Fornecedores</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-004-contrato_fornecedores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-010 - Administradores de desenvolvimento de BPM</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-010-ADM</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-004 - Jurídico</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-004-juridico</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-004 - Gerente suprimentos</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-004-gerente_suprimentos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-011 - Prestador de serviço direto</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-011-PrestServDir</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-admin</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-admin</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-011 - Tesouraria</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-011-Tesouraria</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>BPM-011 - Gestores e diretores</string>
+      </void>
+      <void property="groupId">
+       <string>BPM-011-GestDiretores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Financeiro - Contas a Pagar</string>
+      </void>
+      <void property="groupId">
+       <string>Financeiro - Contas a Pagar</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Financeiro - Tesouraria</string>
+      </void>
+      <void property="groupId">
+       <string>Financeiro - Tesouraria</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>expediente</string>
+   <array class="java.lang.String" length="2">
+    <void index="0">
+     <string>Default</string>
+    </void>
+    <void index="1">
+     <string>EZTEC - Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>mecanismo</string>
+   <array class="[Ljava.lang.Object;" length="9">
+    <void index="0">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Associação</string>
+      </void>
+      <void index="1">
+       <string>Associado</string>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Campo de Formulário</string>
+      </void>
+      <void index="1">
+       <string>Campo Formulário</string>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Executor de Atividade</string>
+      </void>
+      <void index="1">
+       <string>Executor Atividade</string>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupo</string>
+      </void>
+      <void index="1">
+       <string>Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupos do Colaborador</string>
+      </void>
+      <void index="1">
+       <string>Grupos Colaborador</string>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Papel</string>
+      </void>
+      <void index="1">
+       <string>Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Grupo</string>
+      </void>
+      <void index="1">
+       <string>Pool Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Papel</string>
+      </void>
+      <void index="1">
+       <string>Pool Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="8">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Usuário</string>
+      </void>
+      <void index="1">
+       <string>Usuário</string>
+      </void>
+     </array>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 48</string>
+   <array class="java.lang.String" length="53">
+    <void index="0">
+     <string>assunto</string>
+    </void>
+    <void index="1">
+     <string>empresa</string>
+    </void>
+    <void index="2">
+     <string>ramal</string>
+    </void>
+    <void index="3">
+     <string>empresa2</string>
+    </void>
+    <void index="4">
+     <string>arrayApoio</string>
+    </void>
+    <void index="5">
+     <string>emailSolicitante</string>
+    </void>
+    <void index="6">
+     <string>necAjusteValid</string>
+    </void>
+    <void index="7">
+     <string>prazoDeterminado</string>
+    </void>
+    <void index="8">
+     <string>justApoio</string>
+    </void>
+    <void index="9">
+     <string>textFinalizar</string>
+    </void>
+    <void index="10">
+     <string>codApoio</string>
+    </void>
+    <void index="11">
+     <string>outraCategoria</string>
+    </void>
+    <void index="12">
+     <string>userAtivoExecTarefa</string>
+    </void>
+    <void index="13">
+     <string>codApoio2</string>
+    </void>
+    <void index="14">
+     <string>obsHistorico</string>
+    </void>
+    <void index="15">
+     <string>justFinalizar</string>
+    </void>
+    <void index="16">
+     <string>esclarecerSolic</string>
+    </void>
+    <void index="17">
+     <string>descSolic2</string>
+    </void>
+    <void index="18">
+     <string>tipoPrazoValid</string>
+    </void>
+    <void index="19">
+     <string>rdEncaminharSolic</string>
+    </void>
+    <void index="20">
+     <string>necAjuste</string>
+    </void>
+    <void index="21">
+     <string>categoria</string>
+    </void>
+    <void index="22">
+     <string>assunto3</string>
+    </void>
+    <void index="23">
+     <string>atividadeCorrente</string>
+    </void>
+    <void index="24">
+     <string>showTipo</string>
+    </void>
+    <void index="25">
+     <string>rdNecAjuste</string>
+    </void>
+    <void index="26">
+     <string>apoio2</string>
+    </void>
+    <void index="27">
+     <string>codSolicitante</string>
+    </void>
+    <void index="28">
+     <string>rdSolicOriginal</string>
+    </void>
+    <void index="29">
+     <string>depart</string>
+    </void>
+    <void index="30">
+     <string>outraParte</string>
+    </void>
+    <void index="31">
+     <string>folder</string>
+    </void>
+    <void index="32">
+     <string>categoria2</string>
+    </void>
+    <void index="33">
+     <string>historico</string>
+    </void>
+    <void index="34">
+     <string>rdTipoPrazo</string>
+    </void>
+    <void index="35">
+     <string>outroAssunto</string>
+    </void>
+    <void index="36">
+     <string>showModal</string>
+    </void>
+    <void index="37">
+     <string>codGrupo</string>
+    </void>
+    <void index="38">
+     <string>tipo</string>
+    </void>
+    <void index="39">
+     <string>dataSolic</string>
+    </void>
+    <void index="40">
+     <string>userAtivo</string>
+    </void>
+    <void index="41">
+     <string>esclarecer</string>
+    </void>
+    <void index="42">
+     <string>ident</string>
+    </void>
+    <void index="43">
+     <string>solicOriginalValid</string>
+    </void>
+    <void index="44">
+     <string>justMotiv</string>
+    </void>
+    <void index="45">
+     <string>rdAnaliseSolic</string>
+    </void>
+    <void index="46">
+     <string>outraEmpresa</string>
+    </void>
+    <void index="47">
+     <string>solicitante</string>
+    </void>
+    <void index="48">
+     <string>userOutro</string>
+    </void>
+    <void index="49">
+     <string>descSolic</string>
+    </void>
+    <void index="50">
+     <string>ultimaAtualizacao</string>
+    </void>
+    <void index="51">
+     <string>motivoRevisao</string>
+    </void>
+    <void index="52">
+     <string>apoio</string>
+    </void>
+   </array>
+  </void>
+ </object>
+</java>

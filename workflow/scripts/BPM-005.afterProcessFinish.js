@@ -1,7 +1,7 @@
 function afterProcessFinish(processId){
 	
-	log.info("### afterProcessFinish");
-     var server = "http://fluigdev.eztec.com.br";
+	/* log.info("### afterProcessFinish");
+     var server = "http://ezconnect.eztec.com.br";
 	
 	 var empresa = hAPI.getCardValue('empresa');
      var outraEmpresa = hAPI.getCardValue('outraEmpresa');
@@ -35,7 +35,7 @@ function afterProcessFinish(processId){
      
      // * Número da pasta principal que vai receber os arquivos
     //  --------------------------------------------------------- 
-     var GEDparent = 57; //adapte para a sua situação
+     var GEDparent = 286338; //adapte para a sua situação
 
      
      // * Cria pasta dentro da pasta pai
@@ -91,5 +91,5 @@ function afterProcessFinish(processId){
         doc.setUpdateIsoProperties(true);
 
         hAPI.publishWorkflowAttachment(doc);
-     }
+     } */
 }

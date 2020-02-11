@@ -177,7 +177,7 @@
 					<img src="logo.jpg" style="width: 200px" class="img-responsive" id="logo"/>
 				</div>
 				<div class="col-md-5">
-					<h2>Assunto</h2>
+					<h2>Tipo</h2>
 				</div>
 				<div class="col-md-3">
 					
@@ -199,21 +199,18 @@
 
 				<div class="label-field">
 					<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
-						<label for="categoria" class="control-label">Categoria<span class="required text-danger"><strong>*</strong></span></label>
-						<input type="zoom" class="form-control" name="categoria" id="categoria"
-							data-zoom="{
-								'displaykey': 'categoria',
-								'datasetId': 'BPM-005-Categoria',
-								'fields': [
-									{
-										'field': 'categoria',
-										'label': 'Categoria',
-										'filterValues': 'categoria',
-										'standard': 'true'
-									}	
-								]	
-							}"
-						/>
+						<label for="assunto" class="control-label">Assunto<span class="required text-danger"><strong>*</strong></span></label>
+						<input type="zoom" class="form-control" name="assunto" id="assunto" data-zoom="{
+							'displayKey': 'assunto',
+							'datasetId': 'BPM-005-Assunto',
+							'fields': [
+								{
+									'field': 'assunto',
+									'label': 'Assunto',
+									'standard': true
+								}
+							]
+						}" />
 					</div>
 				</div>	
 
@@ -238,8 +235,8 @@
 
 				<div class="label-field">
 					<div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
-						<label for="assunto" class="control-label">Cadastro de Assunto<span class="required text-danger"><strong>*</strong></span></label>
-						<input type="text" name="assunto" id="assunto" class="form-control">
+						<label for="tipo" class="control-label">Cadastro de tipo<span class="required text-danger"><strong>*</strong></span></label>
+						<input type="text" name="tipo" id="tipo" class="form-control">
 					</div>
 				</div>
 

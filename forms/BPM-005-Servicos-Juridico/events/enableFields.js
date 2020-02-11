@@ -2,11 +2,11 @@ function enableFields(form){
 
 	var activity = getValue('WKNumState');
    
-	if (activity == 21) {
-        form.setEnabled('rdSolicOriginal', false);
-        form.setEnabled('userOutro', false);
+	//if (activity == 21) {
+       // form.setEnabled('rdSolicOriginal', false);
+       // form.setEnabled('userOutro', false);
         
-    }
+    //}
 	/*if (activity == 27 || activity == 9){
 		
 		form.setEnabled('rdSolicOriginal', false);
@@ -30,7 +30,7 @@ function enableFields(form){
         
 	}*/
 	
-	if(activity == 27){
+	/* if(activity == 27 || activity == 44){
 		
 		form.setEnabled('rdNecAjuste',false);
         form.setEnabled('rdSolicOriginal', false);
@@ -45,6 +45,6 @@ function enableFields(form){
         form.setEnabled('rdTipoPrazo', false);
         form.setEnabled('rdMotivoPrazo', false);
 
-    }
+    } */
 	
 }

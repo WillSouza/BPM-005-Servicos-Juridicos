@@ -5,7 +5,7 @@ function validateForm(form){
 	var WKNumState = getValue('WKNumState');
 	var WKNextState = getValue('WKNextState');
 
-
+/* 
 	var solicOriginalValid = form.getValue("solicOriginalValid");
 	var userOutro = form.getValue("userOutro");
 	var tipoPrazoValid = form.getValue("tipoPrazoValid");
@@ -55,9 +55,6 @@ function validateForm(form){
 			throw ("Necessário informar prioridade.");
 		}
 
-		if(empresa == ""){
-			throw ("Necessário informar a empresa.");
-		}
 
 		if(outraParte == ""){
 			throw ("Necessário informar outra parte.");
@@ -101,7 +98,7 @@ function validateForm(form){
 		if(prazoRevisao == ""){
 			throw ("Nessario informar prazo para revisão.");	
 		}
-	}
+	} */
 
 }
 function checkErrorJs(form) {
